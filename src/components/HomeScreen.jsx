@@ -213,7 +213,9 @@ function HomeScreen() {
         </div>
         <div className="bk-txt">
           <h2 id="ttl" className="main-ttl">
-            Lorem, ipsum.
+            We Can Help You Get
+            <br />
+            “Leaner & Stronger”
           </h2>
           <p className="hr-txt">
             Every great journey needs a great companion. Take the first step to
@@ -283,7 +285,7 @@ function HomeScreen() {
             Read more about my clients and how I’ve helped them achieve their
             dream bodies.
           </p>
-          <div className="bttn bttn-pmr">Join the Program</div>
+          <a className="bttn bttn-pmr">Join the Program</a>
         </div>
       </section>
     </>

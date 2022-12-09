@@ -3,7 +3,7 @@ import bluediamondLogo from "../assets/BlueDiamond_Logo.png";
 
 function AboutMeScreen() {
   return (
-    <>
+    <div className="abt-m-scrn">
       <section className="ctnr abt-m-ctnr">
         <div>
           <h2 className="main-ttl">About me</h2>
@@ -32,7 +32,7 @@ function AboutMeScreen() {
           <img src={bluediamondLogo} alt="" />
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

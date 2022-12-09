@@ -16,24 +16,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   const navigate = useNavigate();
-  useEffect(() => {
-    document
-      .querySelector("#HandleMenuDisplay")
-      .addEventListener("click", animateIt);
-    document
-      .querySelector(".HandleMenuDisplayButton")
-      .addEventListener("click", closeMenu);
-
-    function animateIt() {
-      mnTl.reversed(!mnTl.reversed());
-    }
-    function closeMenu() {
-      mnTl.reversed(!mnTl.reversed());
-    }
-
+  function HandleMenuDisplay() {
     const mnTl = gsap.timeline({
       defaults: { ease: Expo.easeInOut },
     });
+    mnTl.reversed(!mnTl.reversed());
 
     mnTl
       .to(".nv-wrppr", {
@@ -54,15 +41,41 @@ function Header() {
       )
 
       .reversed(true);
-  }, []);
+  }
+  /* 
+  useEffect(() => {
+    document
+      .querySelector("#HandleMenuDisplay")
+      .addEventListener("click", animateIt);
+    document
+      .querySelector(".HandleMenuDisplayButton")
+      .addEventListener("click", closeMenu);
+
+    function animateIt() {
+      mnTl.reversed(!mnTl.reversed());
+    }
+    function closeMenu() {
+      mnTl.reversed(!mnTl.reversed());
+    }
+
+    const mnTl = gsap.timeline({
+      defaults: { ease: Expo.easeInOut },
+    });
+
+  }, []); */
 
   return (
     <div>
       <header className="hdr-ctnr">
-        <div className="lgo-ctnr" onClick={() => navigate("/")}>
+        <div className="lgo-ctnr">
+          {/* onClick={() => navigate("/") */}
           <img src={logoImg} alt="" className="logoImg" />
         </div>
-        <div className="mn-ctnr" id="HandleMenuDisplay">
+        <div
+          className="mn-ctnr"
+          onClick={HandleMenuDisplay}
+          /* id="HandleMenuDisplay" */
+        >
           <HiOutlineMenuAlt3 className="icon" />
         </div>
         <nav className="nv-wrppr">
@@ -76,7 +89,7 @@ function Header() {
               <span>Products</span>
             </li>
 
-            <li className="nv-itm">
+            <li className="nv-itm" onClick={() => navigate("/services")}>
               <GiWeightLiftingUp className="icon" />
               <span>Services</span>
             </li>

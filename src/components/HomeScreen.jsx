@@ -221,7 +221,7 @@ function HomeScreen() {
         <h2 id="ttlB" className="main-ttl">
           Join my weight
           <br />
-          lost program
+          Loss program
         </h2>
         <p className="txt">
           Every great journey needs a great companion. Take the first step to
@@ -242,7 +242,7 @@ function HomeScreen() {
         <h1 className="main-ttl">Find The Best Products Here!</h1>
         <p className="txt">
           If you are looking for a little help to lose weight, increase your
-          perfomance or take care of yourself I have something for you.
+          perfomance or take care of yourself I have something for you
         </p>
         <div className="imgs-ctnr">
           <div id="Aitm">
@@ -268,7 +268,7 @@ function HomeScreen() {
           <h1 className="main-ttl">Success stories</h1>
           <p className="hr-txt">
             Read more about my clients and how I’ve helped them achieve their
-            dream bodies.
+            dream bodies
           </p>
           <a className="bttn bttn-pmr">Join the Program</a>
         </div>

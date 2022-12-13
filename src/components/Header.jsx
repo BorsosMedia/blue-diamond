@@ -75,6 +75,7 @@ function Header() {
       case "about":
         navigate("/aboutme");
         setHandleMobileMenu(!setHandleMobileMenu);
+        break;
       case "products":
         navigate("/products");
         setHandleMobileMenu(!setHandleMobileMenu);

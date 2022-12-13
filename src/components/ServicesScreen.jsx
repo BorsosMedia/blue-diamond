@@ -6,7 +6,7 @@ function ServicesScreen() {
         <h2 className="main-ttl">Weight lost program</h2>
         <p className="txt">
           Every great journey needs a great companion. Take the first step to
-          get started.
+          get started
         </p>
         <button className="bttn bttn-try">
           Join the program <FaLongArrowAltRight className="icon" />

@@ -8,7 +8,7 @@ function ServicesScreen() {
           Every great journey needs a great companion. Take the first step to
           get started.
         </p>
-        <button className="bttn bttn-pmr">
+        <button className="bttn bttn-try">
           Join the program <FaLongArrowAltRight className="icon" />
         </button>
       </section>

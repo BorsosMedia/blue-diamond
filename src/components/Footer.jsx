@@ -38,12 +38,15 @@ function Footer() {
         </div>
         <p>+1 905-929-1635</p>
       </div>
-      {/*      <div>
+      <div className="txt-ftr-ctnr">
         <p className="ftr-txt">
           © Copyright 2022. All Rights Reserved.
-          <br /> Website designed and developed by Borsos Media.
+          <br /> Website designed and developed by
+          <a href="https://www.borsosmedia.com/" target="_blank">
+            Borsos Media
+          </a>
         </p>
-      </div> */}
+      </div>
     </footer>
   );
 }

@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useLocoScroll from "./hooks/useLocoScroll";
-import Cursor from "./features/Cursor";
+import Cursor from "./features/Cursor.jsx";
 
 import Header from "./components/Header";
 import HomeScreen from "./components/HomeScreen";
@@ -18,8 +18,8 @@ function App() {
 
   return (
     <main className="App" id="app-ctnr" data-scroll-container>
-      <Cursor />
-      <div data-scroll-section className="ctnr-wrppr">
+      {/* <Cursor /> */}
+      <div className="ctnr-wrppr">
         <Header />
         <Routes>
           <Route path="/" element={<HomeScreen />} />

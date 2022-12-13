@@ -17,7 +17,6 @@ import { FaLongArrowAltRight, FaAmazon, FaShoppingCart } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 function HomeScreen() {
-  useLocoScroll();
   const navigate = useNavigate();
   /*   const { cursorChangeHandler } = useContext(MouseContext); */
 
@@ -45,21 +44,8 @@ function HomeScreen() {
         },
         "1.5"
       )
-      .to(".prgph", { opacity: 0, duration: 1, delay: 2 })
-      .to(".anm", {
-        /*         xPercent: "100", */
-        opacity: 0,
-        duration: 7,
-        stagger: 0.2,
+      /*  .to(".prgph", { opacity: 0, duration: 1, delay: 2 }) */
 
-        scrollTrigger: {
-          trigger: ".anm",
-          scroller: "#app-ctnr",
-          start: "center  center",
-
-          scrub: 7,
-        },
-      })
       .to(".bttn-lnk", {
         /*      x: "1000", */
         xPercent: 100,
@@ -73,19 +59,18 @@ function HomeScreen() {
           scrub: 4,
         },
       })
-      .to(".hr-txt-anm", {
-        opacity: 0,
 
+      .to("#scss-img", {
+        y: 20,
         scrollTrigger: {
-          trigger: ".hr-txt",
+          trigger: "#scss-img",
           scroller: "#app-ctnr",
-          start: "center 40%",
-
-          scrub: 4,
+          start: "top center",
+          scrub: 3,
         },
       });
 
-    gsap.to(".column2", {
+    /* gsap.to(".column2", {
       y: 500,
       opacity: 0,
       scrollTrigger: {
@@ -94,7 +79,7 @@ function HomeScreen() {
         start: "center 40%",
         scrub: 4,
       },
-    });
+    }); */
     gsap.to("#Aitm", {
       y: 38,
       scrollTrigger: {
@@ -169,14 +154,14 @@ function HomeScreen() {
             <br />
             -Helen de la Paz
           </p> */}
-        <p className="prgph prgphB">
+        {/*  <p className="prgph prgphB">
           "Magnificent for people like me who are not so responsible but who
           love the fitness body. Thank you for this wonderful proposal of
           healthy life."
           <br />
           <br />
           -Helen de la Paz
-        </p>
+        </p> */}
         <div className="flex-col-ctnr">
           {/*   <p className="dsc-txt">"Magnificent"</p> */}
           <h1 className="main-ttl anm" id="ttl-a">
@@ -278,7 +263,7 @@ function HomeScreen() {
         </button>
       </section>
       <section className="ctnr frth-ctnr">
-        <div className="scss-strs"></div>
+        <div className="scss-strs" id="scss-img"></div>
         <div className="scss-text">
           <h1 className="main-ttl">Success stories</h1>
           <p className="hr-txt">

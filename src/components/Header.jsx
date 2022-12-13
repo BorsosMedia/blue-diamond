@@ -75,6 +75,9 @@ function Header() {
       case "about":
         navigate("/aboutme");
         setHandleMobileMenu(!setHandleMobileMenu);
+      case "products":
+        navigate("/products");
+        setHandleMobileMenu(!setHandleMobileMenu);
     }
   }
   /* 
@@ -117,7 +120,7 @@ function Header() {
             <MdHomeFilled className="icon" />
             <span>Home</span>
           </li>
-          <li className="nv-itm">
+          <li className="nv-itm" onClick={() => handleNavigation("products")}>
             <MdShoppingCart className="icon" />
             <span>Products</span>
           </li>

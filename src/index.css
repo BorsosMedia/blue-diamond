@@ -752,6 +752,26 @@ a {
   text-align: center;
 }
 
+.prd-ctnr {
+  background: url(./assets/prd-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.lnr-prd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(66, 134, 232, 1) -22%,
+    rgba(16, 99, 219, 0) 140%
+  );
+}
+
 /* GSAP STYLES */
 .bttn-lnk {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

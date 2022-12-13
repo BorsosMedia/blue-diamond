@@ -9,6 +9,7 @@ import HomeScreen from "./components/HomeScreen";
 import AboutMeScreen from "./components/AboutMeScreen";
 import ServicesScreen from "./components/ServicesScreen";
 import Footer from "./components/Footer";
+import ProductsScreen from "./components/ProductsScreen";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/aboutme" element={<AboutMeScreen />} />
           <Route path="/services" element={<ServicesScreen />} />
+          <Route path="/products" element={<ProductsScreen />} />
         </Routes>
         <Footer />
       </div>

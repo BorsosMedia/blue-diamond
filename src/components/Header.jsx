@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   const navigate = useNavigate();
-  const location = useLocation();
+
   const anmRef = useRef(null);
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();

@@ -218,24 +218,20 @@ function HomeScreen() {
       </section>
 
       <section className="ctnr thrd-ctnr">
-        <h2 id="ttlB" className="main-ttl">
-          Join my weight
-          <br />
-          Loss program
-        </h2>
-        <p className="txt">
-          Every great journey needs a great companion. Take the first step to
-          get started.
-        </p>
-        <button className="bttn bttn-pmr">
-          Join the program <FaLongArrowAltRight className="icon" />
-        </button>
-
         <div>
-          <img src="" alt="" className="prd-img" />
-          <img src="" alt="" className="prd-img" />
-          <img src="" alt="" className="prd-img" />
-          <img src="" alt="" className="prd-img" />
+          <h2 id="ttlB" className="main-ttl">
+            Join my weight
+            <br />
+            Loss program
+          </h2>
+          <p className="txt">
+            Every great journey needs a great companion. Take the first step to
+            get started.
+          </p>
+          <button className="bttn bttn-pmr">
+            <FaLongArrowAltRight className="icon" />
+            Join the program
+          </button>
         </div>
       </section>
       <section className="ctnr fth-ctnr">

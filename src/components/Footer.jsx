@@ -28,13 +28,13 @@ function Footer() {
       <div className="scl-md">
         <h4 className="ftr-hdr">Connect with us</h4>
         <div className="sm-ctnr">
-          <div className="ftr-lg-ctnr">
+          <a className="ftr-lg-ctnr" target="_blank">
             <GrFacebookOption className="icon" />
-          </div>
+          </a>
 
-          <div className="ftr-lg-ctnr">
+          <a className="ftr-lg-ctnr" target="_blank" href="">
             <RxInstagramLogo className="icon" />
-          </div>
+          </a>
         </div>
         <p>+1 905-929-1635</p>
       </div>

@@ -10,6 +10,7 @@ import AboutMeScreen from "./components/AboutMeScreen";
 import ServicesScreen from "./components/ServicesScreen";
 import Footer from "./components/Footer";
 import ProductsScreen from "./components/ProductsScreen";
+import Contact from "./components/Contact";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
@@ -20,13 +21,15 @@ function App() {
   return (
     <main className="App" id="app-ctnr" data-scroll-container>
       {/* <Cursor /> */}
-      <div className="ctnr-wrppr">
+      <Cursor />
+      <div className="ctnr-wrppr" data-scroll-section>
         <Header />
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/aboutme" element={<AboutMeScreen />} />
           <Route path="/services" element={<ServicesScreen />} />
           <Route path="/products" element={<ProductsScreen />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

@@ -36,20 +36,9 @@ a {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /*   cursor: none; */
+  cursor: none !important;
 }
 
-/* BROADER STYLES */
-/* #cursor {
-  width: 0.6rem;
-  height: 0.6rem;
-  position: fixed;
-  top: 0;
-  background-color: var(--clr);
-  border-radius: 50%;
-  z-index: 9999;
-} */
-/*  */
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -76,6 +65,9 @@ a {
 .hddn-itm {
   overflow: hidden;
 }
+/* BROADER STYLES */
+
+/*  */
 .ctnr-wrppr {
   display: flex;
   flex-direction: column;
@@ -778,6 +770,8 @@ a {
   background-repeat: no-repeat;
   position: relative;
   padding: 2rem 1rem;
+  display: grid;
+  place-content: center;
 }
 .prd-ctnr .txt,
 .prd-ctnr .main-ttl {
@@ -799,6 +793,8 @@ a {
 .wgh-ls {
   background-color: var(--pmr-clr);
   padding: 2rem 1rem;
+  display: grid;
+  place-content: center;
 }
 .wgh-ls .main-ttl,
 .wgh-ls .txt {
@@ -811,6 +807,10 @@ a {
 }
 .prm-ctnr {
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .prm-ctnr .main-ttl {
   color: var(--pmr-clr);
@@ -986,6 +986,18 @@ html.has-scroll-dragging {
 
 /*  */
 
+@media screen and (min-width: 772px) {
+  #cursor {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: fixed;
+
+    background-color: var(--clr);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+  }
+}
 @media screen and (min-width: 600px) {
   .main-ttl,
   .fst-ctnr .main-ttl {

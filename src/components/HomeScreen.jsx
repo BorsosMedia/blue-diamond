@@ -8,7 +8,7 @@ import bookImg from "../assets/Book2.png";
 
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useLocoScroll from "../hooks/useLocoScroll";
+
 import { useNavigate } from "react-router-dom";
 
 import { FaLongArrowAltRight, FaAmazon, FaShoppingCart } from "react-icons/fa";

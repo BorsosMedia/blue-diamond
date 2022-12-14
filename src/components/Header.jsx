@@ -74,11 +74,15 @@ function Header() {
         break;
       case "about":
         navigate("/aboutme");
-        setHandleMobileMenu(!setHandleMobileMenu);
+        setHandleMobileMenu(!handleMobileMenu);
         break;
       case "products":
         navigate("/products");
-        setHandleMobileMenu(!setHandleMobileMenu);
+        setHandleMobileMenu(!handleMobileMenu);
+        break;
+      case "contact":
+        navigate("/contact");
+        setHandleMobileMenu(!handleMobileMenu);
     }
   }
   /* 
@@ -135,7 +139,7 @@ function Header() {
             <FaBlogger className="icon" />
             <span>Blog</span>
           </li>
-          <li className="nv-itm">
+          <li className="nv-itm" onClick={() => handleNavigation("contact")}>
             <MdPhone className="icon" />
             <span>Contact</span>
           </li>

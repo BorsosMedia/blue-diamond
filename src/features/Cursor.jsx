@@ -8,7 +8,7 @@ function Cursor() {
     var ball = document.querySelector("#cursor");
     var pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     var mouse = { x: pos.x, y: pos.y };
-    var speed = 0.1;
+    var speed = 0.17;
 
     var fpms = 60 / 1000;
 

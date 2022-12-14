@@ -28,11 +28,19 @@ function Footer() {
       <div className="scl-md">
         <h4 className="ftr-hdr">Connect with us</h4>
         <div className="sm-ctnr">
-          <a className="ftr-lg-ctnr" target="_blank">
+          <a
+            className="ftr-lg-ctnr"
+            href="https://www.facebook.com/people/Bluediamond-Studio/100063626148311/"
+            target="_blank"
+          >
             <GrFacebookOption className="icon" />
           </a>
 
-          <a className="ftr-lg-ctnr" target="_blank" href="">
+          <a
+            className="ftr-lg-ctnr"
+            target="_blank"
+            href="https://www.instagram.com/bluediamond.estudio/"
+          >
             <RxInstagramLogo className="icon" />
           </a>
         </div>

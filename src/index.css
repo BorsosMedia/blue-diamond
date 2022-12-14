@@ -76,7 +76,7 @@ a {
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: var(--bckg-clr);
 }
 .scnd-ctnr {
@@ -86,8 +86,9 @@ a {
 }
 .scnd-ctnr .main-ttl {
   grid-area: sttl;
-
+  text-align: right;
   color: var(--pmr-clr);
+  width: 100%;
 }
 
 .bk-txt {
@@ -170,17 +171,10 @@ a {
 }
 .frth-ctnr .hr-txt {
   color: var(--clr);
-} /* 
+}
 .scnd-ctnr .main-ttl {
-  color: var(--clr);
   text-align: center;
-  font-size: clamp(1rem, 12vw, 20rem);
-  line-height: clamp(1rem, 12 vw, 18rem);
-  position: relative;
-  margin-bottom: 1rem;
-  z-index: 9999;
-  padding: inherit inherit 2rem inherit !important;
-} */
+}
 
 .grid-img {
   width: 100%;
@@ -270,7 +264,7 @@ a {
 .nv-itm {
   list-style: none;
   padding: 1rem 0 1rem 0;
-
+  position: relative;
   text-align: right;
 
   font-family: Nexa;
@@ -284,10 +278,11 @@ a {
   width: initial;
   cursor: pointer;
 }
-.nv-itm span:focus {
-  color: var(--sdy-clr);
-  transform: scale(1.1);
+.nv-itm-act {
+  color: var(--sdy-clr) !important;
+  font-family: NexaBold;
 }
+
 .nv-itm:last-child {
   text-align: center !important;
   width: 100%;
@@ -314,6 +309,9 @@ a {
 }
 .nv-itm .icon {
   color: #ffff;
+}
+.icon-act {
+  color: var(--sdy-clr) !important;
 }
 .nv-itm:hover {
   gap: 2rem;
@@ -410,8 +408,6 @@ a {
   align-items: center;
   border: none;
   font-size: 0.9rem;
-  min-width: 100%;
-  max-width: 15rem;
 }
 .bttn-pmr {
   grid-area: pmr;
@@ -467,7 +463,8 @@ a {
   display: flex;
   z-index: 999;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 2rem !important;
   align-items: center;
   gap: 1rem;
   min-height: initial;
@@ -489,6 +486,17 @@ a {
   padding: 1rem 0;
   background-color: #ffff;
   border-radius: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  width: calc(100vw - 1rem) !important;
+  max-width: initial !important;
+  min-width: initial !important;
+}
+.bttn-pmr,
+.bttn-sdy,
+.bttn-try {
+  min-width: 100% !important;
+  max-width: 15rem !important;
 }
 .fst-ctnr .hr-txt {
   margin: 0.5rem 0;
@@ -501,11 +509,10 @@ a {
   text-align: center;
 }
 .flex-col-ctnr {
-  position: relative;
   z-index: 10;
   display: flex;
   flex-direction: column;
-
+  height: 100%;
   width: 100%;
 }
 .column2 {
@@ -516,10 +523,8 @@ a {
 }
 
 .img-ctnr {
-  position: absolute;
-  bottom: 0;
-  height: 26rem;
-  width: 26rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
 
   background-color: #fff;
@@ -718,6 +723,11 @@ a {
   background-color: #ffff;
   display: grid;
   place-content: center;
+  transition: var(--trns);
+}
+.ftr-lg-ctnr:hover .icon,
+.ftr-lst-itm:hover {
+  color: var(--sdy-clr);
 }
 .sm-ctnr {
   display: flex;
@@ -846,6 +856,13 @@ a {
   flex-direction: column;
   gap: 1rem;
 }
+.pgrm-srv h3.main-ttl {
+  font-size: 3.2rem !important;
+}
+.grd-mdl .main-ttl {
+  font-size: 4rem !important;
+  text-transform: none;
+}
 .pgrm-srv h4,
 .pgrm-srv h5 {
   color: var(--pmr-clr);
@@ -942,6 +959,7 @@ html.has-scroll-dragging {
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
   z-index: 9999;
+  display: none;
 }
 .c-scrollbar:hover {
   transform: scaleX(1.45);
@@ -1009,55 +1027,6 @@ html.has-scroll-dragging {
   .scss img {
     width: 70%;
   }
-  /* Custom Cursor */
-  .ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    -webkit-transition-duration: 300ms;
-    transition-duration: 100;
-    -webkit-transition-timing-function: ease;
-    transition-timing-function: ease-in;
-    will-change: width, height, transform, border;
-    z-index: 999;
-    pointer-events: none;
-  }
-  .dot {
-    position: fixed;
-    top: -50%;
-    left: 50%;
-    width: 0.8rem;
-    height: 0.8rem;
-    background-color: var(--clr);
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    transition: 100ms ease;
-    z-index: 9999;
-    pointer-events: none;
-    will-change: left top;
-  }
-
-  .ring.hovered {
-    width: 60px;
-    height: 60px;
-    border-width: 3px;
-    background-color: rgba(31, 30, 30, 0.5);
-  }
-  .dot.hovered {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgb(27, 27, 27, 0.6);
-    display: none;
-  }
-  .dot.changed {
-    background-color: var(--pmr-clr);
-    transition: 500ms ease-in-out;
-  }
 }
 /*  */
 .scnd-ctnr .hr-txt,
@@ -1072,6 +1041,40 @@ html.has-scroll-dragging {
 }
 
 @media screen and (min-width: 948px) {
+  .fst-ctnr .bttn-lnk {
+    position: initial;
+    min-width: 100% !important;
+    max-width: 15rem !important;
+  }
+  .flex-col-ctnr {
+    align-items: center;
+    justify-content: center;
+  }
+  .img-ctnr {
+    position: absolute;
+    bottom: 0;
+    height: 26rem;
+    width: 26rem;
+  }
+
+  .nv-itm:last-child {
+    display: none;
+  }
+  .nv-itm:hover .icon {
+    margin-left: 0;
+  }
+  .nv-itm .icon {
+    position: absolute;
+    left: -5px;
+    top: -100%;
+  }
+  .icon-act {
+    opacity: 1 !important;
+    color: var(--sdy-clr) !important;
+    left: -5px;
+    top: 50% !important;
+    transform: translate(0, -50%);
+  }
   .prd-itm-ctnr .itm-ctnr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1244,6 +1247,7 @@ html.has-scroll-dragging {
     transform: translate(0px, 0px) !important;
     padding: 1rem;
     cursor: pointer;
+    padding: 1rem 1.5rem;
   }
 
   .nv-itm:hover span {
@@ -1251,8 +1255,6 @@ html.has-scroll-dragging {
   }
   .nv-itm .icon {
     opacity: 0;
-    visibility: hidden;
-    display: none;
   }
 
   .nv-ctnr {

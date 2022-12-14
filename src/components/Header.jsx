@@ -17,9 +17,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const anmRef = useRef(null);
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
+  const [HandleMenuSection, setHandleMenuSection] = useState("a");
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
@@ -67,45 +69,35 @@ function Header() {
       case "home":
         navigate("/");
         setHandleMobileMenu(!handleMobileMenu);
-        break;
-      case "services":
-        navigate("/services");
-        setHandleMobileMenu(!handleMobileMenu);
-        break;
-      case "about":
-        navigate("/aboutme");
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("a");
         break;
       case "products":
         navigate("/products");
         setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("b");
         break;
+      case "services":
+        navigate("/services");
+        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("c");
+        break;
+      case "blog":
+        navigate("/blog");
+        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("d");
+        break;
+      case "about":
+        navigate("/aboutme");
+        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("e");
+        break;
+
       case "contact":
         navigate("/contact");
         setHandleMobileMenu(!handleMobileMenu);
+        setHandleMenuSection("f");
     }
   }
-  /* 
-  useEffect(() => {
-    document
-      .querySelector("#HandleMenuDisplay")
-      .addEventListener("click", animateIt);
-    document
-      .querySelector(".HandleMenuDisplayButton")
-      .addEventListener("click", closeMenu);
-
-    function animateIt() {
-      mnTl.reversed(!mnTl.reversed());
-    }
-    function closeMenu() {
-      mnTl.reversed(!mnTl.reversed());
-    }
-
-    const mnTl = gsap.timeline({
-      defaults: { ease: Expo.easeInOut },
-    });
-
-  }, []); */
 
   return (
     <header className="hdr-ctnr">
@@ -122,31 +114,55 @@ function Header() {
       <nav className="nv-wrppr">
         <ul className="nv-ctnr">
           <li className="nv-itm" onClick={() => handleNavigation("home")}>
-            <MdHomeFilled className="icon" />
-            <span>Home</span>
+            <MdHomeFilled
+              className={HandleMenuSection === "a" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "a" && "nv-itm-act"}>
+              Home
+            </span>
           </li>
           <li className="nv-itm" onClick={() => handleNavigation("products")}>
-            <MdShoppingCart className="icon" />
-            <span>Products</span>
+            <MdShoppingCart
+              className={HandleMenuSection === "b" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "b" && "nv-itm-act"}>
+              Products
+            </span>
           </li>
 
           <li className="nv-itm" onClick={() => handleNavigation("services")}>
-            <GiWeightLiftingUp className="icon" />
-            <span>Services</span>
+            <GiWeightLiftingUp
+              className={HandleMenuSection === "c" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "c" && "nv-itm-act"}>
+              Services
+            </span>
           </li>
 
-          <li className="nv-itm">
-            <FaBlogger className="icon" />
-            <span>Blog</span>
-          </li>
-          <li className="nv-itm" onClick={() => handleNavigation("contact")}>
-            <MdPhone className="icon" />
-            <span>Contact</span>
+          <li className="nv-itm" onClick={() => handleNavigation("blog")}>
+            <FaBlogger
+              className={HandleMenuSection === "d" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "d" && "nv-itm-act"}>
+              Blog
+            </span>
           </li>
 
           <li className="nv-itm" onClick={() => handleNavigation("about")}>
-            <MdPerson className="icon" />
-            <span>About me</span>
+            <MdPerson
+              className={HandleMenuSection === "e" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "e" && "nv-itm-act"}>
+              About me
+            </span>
+          </li>
+          <li className="nv-itm" onClick={() => handleNavigation("contact")}>
+            <MdPhone
+              className={HandleMenuSection === "f" ? "icon icon-act" : "icon"}
+            />
+            <span className={HandleMenuSection === "f" && "nv-itm-act"}>
+              Contact
+            </span>
           </li>
 
           <li className="nv-itm">

@@ -1043,11 +1043,10 @@ html.has-scroll-dragging {
 @media screen and (min-width: 948px) {
   .fst-ctnr .bttn-lnk {
     position: initial;
-    min-width: 100% !important;
+
     max-width: 15rem !important;
   }
   .flex-col-ctnr {
-    align-items: center;
     justify-content: center;
   }
   .img-ctnr {

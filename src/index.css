@@ -443,7 +443,10 @@ a {
   font-size: 0.9rem;
   align-self: center;
 }
-.bttn-lnk:hover {
+.bttn-lnk:hover,
+.bttn-pmr:hover,
+.bttn-sdy:hover,
+.bttn-try:hover {
   background-color: var(--pmr-clr);
   color: #ffff;
   gap: 2rem;
@@ -467,7 +470,7 @@ a {
   padding-top: 2rem !important;
   align-items: center;
   gap: 1rem;
-  min-height: initial;
+
   background: linear-gradient(
     90deg,
     rgba(29, 160, 231, 1) 0%,
@@ -476,7 +479,7 @@ a {
   );
 
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding: 0 1rem;
@@ -486,9 +489,8 @@ a {
   padding: 1rem 0;
   background-color: #ffff;
   border-radius: 0.8rem;
-  position: absolute;
-  bottom: 1rem;
-  width: calc(100vw - 1rem) !important;
+
+  width: 15rem;
   max-width: initial !important;
   min-width: initial !important;
 }
@@ -518,32 +520,29 @@ a {
 .column2 {
   display: flex;
   align-items: center;
-  position: relative;
-  height: 100%;
+  justify-content: center;
+  /*   position: relative; */
+  /* height: 50vh; */
+  width: 100%;
 }
 
 .img-ctnr {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-
-  background-color: #fff;
-  box-shadow: 0 20px 50px -25px white;
-
-  /*   box-shadow: var(
-    --bx-shw
-  ); */ /*
-  background: url(./assets/heroImg.jpg);
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url(./assets/heroImg.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+  background-size: contain;
   background-position: center;
-  background-repeat: no-repeat; */
 }
 .img-ctnr img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  width: 5rem;
+  height: auto;
+  object-fit: cover;
   transition: 500ms ease-in-out;
-  transform: scale(1.3) translate(0, 0);
+
   transform-origin: bottom;
 }
 .spc1 {
@@ -562,11 +561,14 @@ a {
 } */
 .fth-ctnr {
   padding: 2rem 1rem 2rem 1rem;
-  background-color: var(--pmr-clr);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  background: url(./assets/prd-sc-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .fth-ctnr .main-ttl {
   color: #fff;
@@ -709,7 +711,7 @@ a {
   list-style: none;
   color: #ffff;
   padding: 0.7rem 0 0.7rem 0;
-  text-align: right;
+  text-align: center;
   font-family: NexaRegular;
 }
 .ftr-lg-img {
@@ -816,15 +818,19 @@ a {
   flex-direction: column;
 }
 .prm-ctnr {
+  background: url(./assets/prm-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
   padding: 2rem 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
+
 .prm-ctnr .main-ttl {
   color: var(--pmr-clr);
 }
+
 .itm-ctnr .prd-img-ctnr {
   padding-top: 1rem;
   width: 100%;
@@ -868,7 +874,7 @@ a {
   color: var(--pmr-clr);
 }
 .mdl-nm span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: NexaBold;
 }
 .pgrm-srv h5 {
@@ -1041,9 +1047,23 @@ html.has-scroll-dragging {
 }
 
 @media screen and (min-width: 948px) {
-  .fst-ctnr .bttn-lnk {
-    position: initial;
+  .prm-ctnr div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 60%;
 
+    justify-content: flex-end;
+  }
+  .prm-ctnr .main-ttl {
+    text-align: right;
+  }
+  .prm-ctnr .txt {
+    text-align: right;
+  }
+  .fst-ctnr .bttn-lnk {
+    align-self: auto;
     max-width: 15rem !important;
   }
   .flex-col-ctnr {
@@ -1052,8 +1072,7 @@ html.has-scroll-dragging {
   .img-ctnr {
     position: absolute;
     bottom: 0;
-    height: 26rem;
-    width: 26rem;
+    height: 80vh;
   }
 
   .nv-itm:last-child {
@@ -1172,7 +1191,7 @@ html.has-scroll-dragging {
     padding-top: 0;
   }
   .abt-m-img {
-    height: 60%;
+    height: 70%;
   }
   .abt-m-lg-ctnr {
     width: 20rem;
@@ -1235,7 +1254,7 @@ html.has-scroll-dragging {
   .hr-txt {
     text-align: left;
   }
-  .bttn-lnk {
+  .lnklnk {
     align-self: flex-start;
   }
   /*   .nv-itm:last-child {

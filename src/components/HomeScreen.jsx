@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-import heroImg from "../assets/heroImg.png";
 import gridImg from "../assets/gridImg.jpg";
 import gridImg2 from "../assets/gridImg2.jpg";
 import gridImg3 from "../assets/gridImg3.jpg";
@@ -17,12 +16,8 @@ import { FaLongArrowAltRight, FaAmazon, FaShoppingCart } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 function HomeScreen() {
-  const navigate = useNavigate();
   /*   const { cursorChangeHandler } = useContext(MouseContext); */
 
-  function HandleMobileMenu() {
-    setMobileMenuDisplay(!MobileMenuDisplay);
-  }
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: Expo.easeInOut } });
     tl.to(".anm", {
@@ -175,8 +170,9 @@ function HomeScreen() {
             </div> */}
 
           <p className="hr-txt hr-txt-anm">
-            A REAL change starts with a lifestyle transformation. <br /> I can
-            help you start that change TODAY!
+            A REAL change starts with a lifestyle transformation.
+            <br />
+            We can help you start that change TODAY!
           </p>
           <a
             href="https://www.google.com"
@@ -187,9 +183,7 @@ function HomeScreen() {
           </a>
         </div>
         <div className="column2">
-          <div className="img-ctnr">
-            <img src={heroImg} alt="" />
-          </div>
+          <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
         </div>
       </section>
       <section className="ctnr scnd-ctnr">
@@ -220,7 +214,7 @@ function HomeScreen() {
       <section className="ctnr thrd-ctnr">
         <div>
           <h2 id="ttlB" className="main-ttl">
-            Join my weight
+            Join our weight
             <br />
             Loss program
           </h2>
@@ -237,8 +231,8 @@ function HomeScreen() {
       <section className="ctnr fth-ctnr">
         <h1 className="main-ttl">Find The Best Products Here!</h1>
         <p className="txt">
-          If you are looking for a little help to lose weight, increase your
-          perfomance or take care of yourself I have something for you
+          If you need help to lose weight, increase your performance or take
+          better care of yourself, we got something for you!
         </p>
         <div className="imgs-ctnr">
           <div id="Aitm">
@@ -263,10 +257,12 @@ function HomeScreen() {
         <div className="scss-text">
           <h1 className="main-ttl">Success stories</h1>
           <p className="hr-txt">
-            Read more about my clients and how I’ve helped them achieve their
-            dream bodies
+            Read more about our clients and how we’ve helped them achieve their
+            dream bodies.
           </p>
-          <a className="bttn bttn-pmr">Join the Program</a>
+          <a className="bttn bttn-pmr">
+            Join the Program <FaLongArrowAltRight className="icon" />
+          </a>
         </div>
       </section>
     </>

@@ -12,7 +12,6 @@ export default function useLocoScroll() {
       smoothMobile: false,
       scrollbarContainer: false,
       multiplier: 1,
-      reloadOnContextChange: true,
     });
 
     new ResizeObserver(() => locoScroll.update()).observe(

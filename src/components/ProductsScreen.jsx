@@ -70,7 +70,7 @@ function ProductsScreen() {
             <h4>My 120 Day Meal Planner</h4>
             <p>
               Diets don’t need to be boring, and with this meal planner we’re
-              thinking long-term to help you organize your food to add variety,
+              thinking long-term to help you organize your food, add variety,
               and help you eat the right portions at the right time.
             </p>
             <button className="bttn bttn-try">

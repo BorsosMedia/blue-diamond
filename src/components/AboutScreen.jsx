@@ -2,12 +2,12 @@ import React from "react";
 import Nelvis from "../assets/Nelvis-str.png";
 import Irma from "../assets/Irma-str.png";
 
-function AboutMeScreen() {
+function AboutScreen() {
   return (
     <>
       <section className="ctnr abt-m-ctnr">
         <div>
-          <h2 className="main-ttl">About me</h2>
+          <h2 className="main-ttl">About Our Founder</h2>
           <p className="txt">
             With a strong background in science, specifically Chemistry,{" "}
             <strong style={{ color: "black", fontFamily: "NexaBold" }}>
@@ -28,23 +28,23 @@ function AboutMeScreen() {
         <p className="txt">
           Blue Diamond Studio is a Fitness Company located in Hamilton, ON. We
           specialize in personalized workouts, nutritional coaching, strength
-          coaching, fitness coaching, and personal training
+          coaching, fitness coaching, and personal training.
           <br />
           <br />
           We feel that individual health is extremely important and needs to
           constantly be maintained, because personal health and liveliness are
-          the cornerstones to a long, healthy, and fruitful life
+          the cornerstones to a long, healthy, and fruitful life.
           <br />
           <br />
           Our approach is being with you every step of the way along your
           journey to self refinement, and helping you reach and maintain your
-          fitness and nutritional goals
+          fitness and nutritional goals.
           <br />
           <br />
           Blue Diamond was born out of Liset’s goal of helping people become the
           fittest and healthiest versions of themselves at any age. We combine
           personalized workouts with nutrition tips to change your eating habits
-          and transform your lifestyle
+          and transform your lifestyle.
         </p>
         {/* <div className="abt-m-lg-ctnr">
           <img src={bluediamondLogo} alt="" />
@@ -89,4 +89,4 @@ function AboutMeScreen() {
   );
 }
 
-export default AboutMeScreen;
+export default AboutScreen;

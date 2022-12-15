@@ -1,9 +1,16 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import logoImg from "../assets/BlueDiamond_Logo.png";
 import { GrFacebookOption } from "react-icons/gr";
 import { RxInstagramLogo } from "react-icons/rx";
 
 function Footer() {
+  const navigate = useNavigate();
+
+  function handleFooterNav(dest) {
+    navigate(`${dest}`);
+    window.location.reload(false);
+  }
   return (
     <footer className="ftr-ctnr">
       <div className="ctc-ctnr">
@@ -18,12 +25,30 @@ function Footer() {
       </div>
       <ul className="ftr-lst">
         <h4 className="ftr-hdr">Quick Links</h4>
-        <li className="ftr-lst-itm">Home</li>
-        <li className="ftr-lst-itm">Products</li>
-        <li className="ftr-lst-itm">Services</li>
-        <li className="ftr-lst-itm">About me</li>
-        <li className="ftr-lst-itm">Blog</li>
-        <li className="ftr-lst-itm">Contact</li>
+        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/")}>
+          Home
+        </li>
+        <li
+          className="ftr-lst-itm"
+          onClick={() => handleFooterNav("/products")}
+        >
+          Products
+        </li>
+        <li
+          className="ftr-lst-itm"
+          onClick={() => handleFooterNav("/services")}
+        >
+          Services
+        </li>
+        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/aboutme")}>
+          About me
+        </li>
+        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/blog")}>
+          Blog
+        </li>
+        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/contact")}>
+          Contact
+        </li>
       </ul>
       <div className="scl-md">
         <h4 className="ftr-hdr">Connect with us</h4>

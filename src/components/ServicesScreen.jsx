@@ -3,22 +3,28 @@ function ServicesScreen() {
   return (
     <>
       <section className="ctnr prm-ctnr">
-        <h2 className="main-ttl">How to Get the Body of Your Dreams</h2>
-        <p className="txt">
-          Controlling what we eat is a key part of any weight loss program, but
-          beyond starting a diet, it’s about understanding how our body
-          chemistry works, organizing our meal schedules and regulating our meal
-          portions.
-        </p>
-        <button className="bttn bttn-try">
-          Join the program <FaLongArrowAltRight className="icon" />
-        </button>
+        <div>
+          <h2 className="main-ttl">
+            How to Get <br />
+            the Body of Your Dreams
+          </h2>
+          <p className="txt">
+            Controlling what we eat is a key part of any weight loss program,
+            but beyond starting a diet, it’s about understanding how our body
+            chemistry works, organizing our meal schedules, and regulating our
+            meal portions.
+          </p>
+          <button className="bttn bttn-try">
+            Join the program <FaLongArrowAltRight className="icon" />
+          </button>
+        </div>
       </section>
       <section className="ctnr srv-ctnr">
         <h2 className="main-ttl">Weight loss program</h2>
         <p className="txt">
-          Every great journey needs a great companion. Take the first step to
-          get started
+          Our weight loss program is designed to help you eat the right portions
+          at the right time, stay motivated to eat the right food, and
+          incorporate healthier habits in only 6 weeks.
         </p>
         <button className="bttn bttn-try">
           Join the program <FaLongArrowAltRight className="icon" />
@@ -44,20 +50,20 @@ function ServicesScreen() {
           </ul>
         </div>
         <div className="grd-mdl">
-          <h4 className="main-ttl">Our program is divided into four modules</h4>
+          <h4 className="main-ttl">Our Program Is Divided Into Four Modules</h4>
           <div className="mdl">
             <h5 className="mdl-nm">
               <span>1</span>st Module: Goal Setting
             </h5>
             <ul>
-              <li>Learn why you are embarking upon this journey</li>
+              <li>Learn why you are embarking upon this journey.</li>
               <li>
                 Learn how to set specific, measurable, and attainable goals with
-                specific timelines
+                specific timelines.
               </li>
               <li>
-                Identify courses of weight gain and develop strategies to avoid
-                weight-gain related stress
+                Identify causes of weight gain and develop strategies to avoid
+                weight-gain related stress.
               </li>
             </ul>
           </div>
@@ -69,11 +75,11 @@ function ServicesScreen() {
               <li>
                 Learn how to avoid/control cravings, food addiction and
                 emotional eating by fixing your brain chemistry and choosing the
-                right types of food
+                right types of food.
               </li>
               <li>
                 Learn the best times to eat certain foods to support your weight
-                loss journey
+                loss journey.
               </li>
             </ul>
           </div>
@@ -84,12 +90,12 @@ function ServicesScreen() {
             <ul>
               <li>
                 Learn about portion control (meal plans and portion sizes
-                customized to your needs)
+                customized to the client’s needs)
               </li>
-              <li>Learn which types of food can boost your metabolism</li>
-              <li>Learn hot to lose and maintain a healthy weight</li>
+              <li>Learn which types of food can boost your metabolism.</li>
+              <li>Learn how to lose and maintain a healthy weight.</li>
               <li>
-                Get nutrition tips for breakfast, lunch, and dinner examples
+                Get nutrition tips for breakfast, lunch, and dinner examples.
               </li>
             </ul>
           </div>
@@ -100,7 +106,7 @@ function ServicesScreen() {
             <ul>
               <li>
                 Learn scientifically supported ways to improve gut microbiome to
-                enhance overall health, digestion, hormones, sleep, and mood
+                enhance overall health, digestion, hormones, sleep, and mood.
               </li>
             </ul>
           </div>
@@ -110,22 +116,22 @@ function ServicesScreen() {
             Our 6-Week Weight Loss Program Will Teach How To:
           </h3>
           <ul>
-            <li>Lose weight and control your hunger forever</li>
-            <li>Avoid/control food addiction</li>
+            <li>Lose weight and control your hunger forever.</li>
+            <li>Avoid/control food addiction.</li>
             <li>
               Change your brain chemistry and regulate your neurotransmitters to
-              stay focused and motivated by selecting the right types of food
+              stay focused and motivated by selecting the right types of foods.
             </li>
             <li>Portion control. Boost your metabolism.</li>
-            <li>Reset your gut flora</li>
-            <li>Organize your meals</li>
-            <li>Stress reducing tools to avoid stress related weight gain</li>
+            <li>Reset your gut flora.</li>
+            <li>Organize your meals.</li>
+            <li>Stress reducing tools to avoid stress related weight gain.</li>
             <li>
               Activate your ability to make good choices that support your
-              weight loss journey
+              weight loss journey.
             </li>
             <li>
-              Incorporate healthy habits and practices daily in your routine
+              Incorporate healthy habits and practices daily in your routine.
             </li>
           </ul>
         </div>

@@ -6,7 +6,7 @@ import Cursor from "./features/Cursor.jsx";
 
 import Header from "./components/Header";
 import HomeScreen from "./components/HomeScreen";
-import AboutMeScreen from "./components/AboutMeScreen";
+import AboutScreen from "./components/AboutScreen";
 import ServicesScreen from "./components/ServicesScreen";
 import Footer from "./components/Footer";
 import ProductsScreen from "./components/ProductsScreen";
@@ -30,7 +30,7 @@ function App() {
           <Route path="/products" element={<ProductsScreen />} />
           <Route path="/services" element={<ServicesScreen />} />
           <Route path="/blog" element={<BlogScreen />} />
-          <Route path="/aboutme" element={<AboutMeScreen />} />
+          <Route path="/about" element={<AboutScreen />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

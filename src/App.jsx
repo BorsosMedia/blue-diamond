@@ -18,6 +18,11 @@ import BlogScreen from "./components/BlogScreen";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   useLocoScroll();
+  /* 
+    El texto es NexaRegular, y la fuente deberia ser Nexa Light
+
+
+*/
 
   return (
     <main className="App" id="app-ctnr" data-scroll-container>

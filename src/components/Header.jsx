@@ -73,23 +73,23 @@ function Header() {
         break;
       case "/products":
         navigate("/products");
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMobileMenu(false);
         setHandleMenuSection("b");
         break;
       case "/services":
         navigate("/services");
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMobileMenu(false);
         setHandleMenuSection("c");
         break;
-      case "/blog":
+     /*  case "/blog":
         navigate("/blog");
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMobileMenu(false);
         setHandleMenuSection("d");
 
-        break;
+        break; */
       case "/about":
         navigate("/about");
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMobileMenu(false);
         setHandleMenuSection("e");
         break;
 
@@ -147,7 +147,7 @@ function Header() {
             </span>
           </li>
 
-          <li className="nv-itm" onClick={() => navigate("blog")}>
+        {/*   <li className="nv-itm" onClick={() => navigate("blog")}>
             <FaBlogger
               className={HandleMenuSection === "d" ? "icon icon-act" : "icon"}
             />
@@ -156,7 +156,7 @@ function Header() {
             >
               Blog
             </span>
-          </li>
+          </li> */}
 
           <li className="nv-itm" onClick={() => navigate("about")}>
             <MdPerson

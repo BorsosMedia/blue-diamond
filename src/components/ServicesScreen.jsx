@@ -20,15 +20,17 @@ function ServicesScreen() {
         </div>
       </section>
       <section className="ctnr srv-ctnr">
-        <h2 className="main-ttl">Weight loss program</h2>
-        <p className="txt">
-          Our weight loss program is designed to help you eat the right portions
-          at the right time, stay motivated to eat the right food, and
-          incorporate healthier habits in only 6 weeks.
-        </p>
-        <button className="bttn bttn-try">
-          Join the program <FaLongArrowAltRight className="icon" />
-        </button>
+        <div>
+          <h2 className="main-ttl">Weight loss program</h2>
+          <p className="txt">
+            Our weight loss program is designed to help you eat the right
+            portions at the right time, stay motivated to eat the right food,
+            and incorporate healthier habits in only 6 weeks.
+          </p>
+          <button className="bttn bttn-try">
+            Join the program <FaLongArrowAltRight className="icon" />
+          </button>
+        </div>
       </section>
       <section className="ctnr pgrm-srv">
         <div>

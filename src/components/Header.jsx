@@ -5,7 +5,7 @@ import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logoImg from "../assets/BlueDiamond_Logo.png";
 import { GiWeightLiftingUp } from "react-icons/gi";
-import { FaBlogger } from "react-icons/fa";
+
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import {
   MdHomeFilled,

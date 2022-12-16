@@ -102,7 +102,7 @@ function Header() {
   }, [location.pathname]);
 
   return (
-    <header className="hdr-ctnr">
+    <div className="hdr-ctnr">
       <div className="lgo-ctnr" onClick={() => navigate("/")}>
         <img src={logoImg} alt="" className="logoImg" />
       </div>
@@ -184,7 +184,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 }
 

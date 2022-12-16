@@ -5,8 +5,8 @@ function ServicesScreen() {
       <section className="ctnr prm-ctnr">
         <div>
           <h2 className="main-ttl">
-            How to Get <br />
-            the Body of Your Dreams
+            How to Get 
+            the Body <br/> of Your Dreams
           </h2>
           <p className="txt">
             Controlling what we eat is a key part of any weight loss program,
@@ -15,7 +15,7 @@ function ServicesScreen() {
             meal portions.
           </p>
           <button className="bttn bttn-try">
-            Join the program <FaLongArrowAltRight className="icon" />
+            Join the program {/* <FaLongArrowAltRight className="icon" /> */}
           </button>
         </div>
       </section>
@@ -28,7 +28,7 @@ function ServicesScreen() {
             and incorporate healthier habits in only 6 weeks.
           </p>
           <button className="bttn bttn-try">
-            Join the program <FaLongArrowAltRight className="icon" />
+            Join the program {/* <FaLongArrowAltRight className="icon" /> */}
           </button>
         </div>
       </section>

@@ -12,7 +12,7 @@ function Footer() {
     window.location.reload(false);
   }
   return (
-    <footer className="ftr-ctnr">
+    <div className="ftr-ctnr">
       <div className="ctc-ctnr">
         <img src={logoImg} alt="" className="ftr-lg-img" />
 
@@ -80,7 +80,7 @@ function Footer() {
           </a>
         </p>
       </div>
-    </footer>
+    </div>
   );
 }
 

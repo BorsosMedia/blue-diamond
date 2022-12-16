@@ -43,7 +43,7 @@ function ProductsScreen() {
               before starting a weight loss program.
             </p>
             <button className="bttn bttn-try">
-              Buy Here <FaLongArrowAltRight className="icon" />
+              Buy Here {/* <FaLongArrowAltRight className="icon" /> */}
             </button>
           </div>
         </div>
@@ -58,7 +58,7 @@ function ProductsScreen() {
               that will help you maintain focus on reaching your fitness goals.
             </p>
             <button className="bttn bttn-try">
-              Buy Here <FaLongArrowAltRight className="icon" />
+              Buy Here {/* <FaLongArrowAltRight className="icon" /> */}
             </button>
           </div>
         </div>
@@ -74,7 +74,7 @@ function ProductsScreen() {
               and help you eat the right portions at the right time.
             </p>
             <button className="bttn bttn-try">
-              Buy here <FaLongArrowAltRight className="icon" />
+              Buy here {/* <FaLongArrowAltRight className="icon" /> */}
             </button>
           </div>
         </div>

@@ -33,9 +33,12 @@ function Cursor() {
     const hvrTarget = document.querySelector(".bttn");
     const cursor = document.querySelector("#cursor");
 
+    
     hvrTarget.addEventListener('mouseenter', (e) => {
       cursor.classList.add("crs-act")
     });
+
+
     hvrTarget.addEventListener('mouseleave', (e) => {
       cursor.classList.remove("crs-act")
     });

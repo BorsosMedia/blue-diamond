@@ -104,7 +104,7 @@ a {
 }
 .img-bk {
   width: 100%;
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 .txt-dsc {
   height: 10rem;
@@ -214,7 +214,7 @@ a {
 
   width: 100%;
   /*   position: relative; */
-  position: relative;
+  
   padding: 0 1rem;
   top: 0;
   display: flex;
@@ -591,6 +591,7 @@ a {
 }
 .thrd-ctnr .main-ttl {
   color: #ffff;
+  text-align: center;
 }
 .thrd-ctnr .bttn-pmr {
   background-color: var(--sdy-clr);
@@ -681,7 +682,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: url(./assets/wgh-lss-bg.png);
+  background: url(./assets/wgh-lss-bg.jpg);
   background-position: 65% 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1015,8 +1016,8 @@ html.has-scroll-dragging {
 
 @media screen and (min-width: 772px) {
   .crs {
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.7rem;
+    height: 0.7rem;
     position: fixed;
     background-color: rgb(36, 36, 36);
     border-radius: 50%;
@@ -1042,7 +1043,12 @@ html.has-scroll-dragging {
     font-family: NexaBold;
   }
 }
+
+
 @media screen and (min-width: 600px) {
+  .thrd-ctnr .main-ttl {
+    text-align: left;
+  }
   .main-ttl,
   .fst-ctnr .main-ttl {
     font-size: clamp(1rem, 8vw, 20rem);
@@ -1066,7 +1072,7 @@ html.has-scroll-dragging {
   padding: 0 1rem;
 }
 
-@media screen and (min-width: 948px) {
+@media screen and (min-width: 912px) {
   .srv-ctnr {
     align-items: flex-start;
   }
@@ -1259,9 +1265,7 @@ html.has-scroll-dragging {
     grid-template-columns: 1fr 1fr;
   }
 
-  .bk-hr {
-    overflow: hidden;
-  }
+  
   .scnd-ctnr .main-ttl {
     padding: 0;
   }

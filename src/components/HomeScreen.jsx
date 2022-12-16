@@ -179,7 +179,7 @@ function HomeScreen() {
             target="_blank"
             className="bttn bttn-lnk"
           >
-            Start today <FaLongArrowAltRight className="icon" />
+            Start today {/* <FaLongArrowAltRight className="icon" /> */}
           </a>
         </div>
         <div className="column2">
@@ -223,7 +223,7 @@ function HomeScreen() {
             get started.
           </p>
           <button className="bttn bttn-pmr">
-            <FaLongArrowAltRight className="icon" />
+            {/* <FaLongArrowAltRight className="icon" /> */}
             Join the program
           </button>
         </div>
@@ -249,7 +249,7 @@ function HomeScreen() {
           </div>
         </div>
         <button className="bttn bttn-try">
-          Go to the store <FaLongArrowAltRight className="icon" />
+          Go to the store {/* <FaLongArrowAltRight className="icon" /> */}
         </button>
       </section>
       <section className="ctnr frth-ctnr">
@@ -261,7 +261,7 @@ function HomeScreen() {
             dream bodies.
           </p>
           <a className="bttn bttn-pmr">
-            Join the Program <FaLongArrowAltRight className="icon" />
+            Join the Program{/*  <FaLongArrowAltRight className="icon" /> */}
           </a>
         </div>
       </section>

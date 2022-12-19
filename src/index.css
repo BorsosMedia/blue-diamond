@@ -115,7 +115,7 @@ a {
 }
 .img-bk {
   width: 100%;
-  transform: scale(1.4);
+  transform: scale(1.6);
 }
 .txt-dsc {
   height: 10rem;
@@ -644,8 +644,8 @@ a {
 .abt-m-ctnr {
   display: grid;
   grid-template-rows: 1fr 1fr;
-
   padding: 2rem 1rem 2rem 1rem;
+  margin-top: 60px;
 }
 .abt-m-ctnr .main-ttl {
   color: var(--pmr-clr);
@@ -828,6 +828,7 @@ a {
   position: relative;
   padding: 2rem 1rem;
   display: grid;
+  margin-top: 60px;
   place-content: center;
 }
 .prd-ctnr .txt,
@@ -870,6 +871,7 @@ a {
   padding: 2rem 1rem;
   display: flex;
   justify-content: flex-end;
+  margin-top: 60px;
 }
 
 .prm-ctnr .main-ttl {
@@ -958,6 +960,12 @@ a {
 }
 .prgrm-srv ul li {
   margin-bottom: 1rem;
+}
+.ctc-ctnr {
+  margin-top: 60px;
+}
+.ctc-ctnr h1 {
+  color: black;
 }
 /* GSAP STYLES */ /* 
 .bttn-lnk {

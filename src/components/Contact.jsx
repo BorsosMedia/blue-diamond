@@ -7,7 +7,9 @@ function Contact() {
   }, []);
   return (
     <>
-      <section className="ctnr">Contact Screen</section>
+      <section className="ctnr ctc-ctnr">
+        <h1>asdasdasd</h1>
+      </section>
     </>
   );
 }

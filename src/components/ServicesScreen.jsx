@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import poly1 from "../assets/poly1.png";
 import poly2 from "../assets/poly2.png";
 import poly3 from "../assets/poly3.png";
 import poly4 from "../assets/poly4.png";
 function ServicesScreen() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <section className="ctnr prm-ctnr">

@@ -25,7 +25,7 @@ function Header() {
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
   const [HandleMenuSection, setHandleMenuSection] = useState(initialSection);
   const { lockScroll, unlockScroll } = useScrollLock();
-  console.log(HandleMenuSection);
+
   useEffect(() => {
     anmRef.current = gsap.timeline({
       defaults: { ease: Expo.easeInOut },

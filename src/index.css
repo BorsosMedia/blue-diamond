@@ -256,10 +256,16 @@ a {
   gap: 10rem;
   flex-direction: column;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  padding: 3rem 1rem 6rem 1rem;
+  padding: 60.19px 1rem 6rem 1rem;
 }
 .nv-ctnr {
   width: 100%;
+}
+.lnk-ctnr {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 0.5rem;
 }
 .bckgr-img-ctnr {
   background: url(./assets/mobile-menu-background.png);
@@ -316,7 +322,7 @@ a {
   font-family: NexaBold;
   font-size: 1.1rem;
   color: #ffff;
-  bottom: 6rem;
+  bottom: 5rem;
   left: 50%;
   transform: translate(-50%, 0) !important;
   display: flex;
@@ -1065,6 +1071,11 @@ html.has-scroll-dragging {
 /*  */
 
 @media screen and (min-width: 772px) {
+  .lnk-ctnr {
+    margin-top: 0;
+    display: flex;
+    gap: 1rem;
+  }
   .crs {
     width: 0.7rem;
     height: 0.7rem;

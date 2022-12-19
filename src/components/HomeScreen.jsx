@@ -15,6 +15,7 @@ import { FaLongArrowAltRight, FaAmazon, FaShoppingCart } from "react-icons/fa";
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
 gsap.registerPlugin(ScrollTrigger);
+
 function HomeScreen() {
   /*   const { cursorChangeHandler } = useContext(MouseContext); */
 

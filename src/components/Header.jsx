@@ -231,22 +231,23 @@ function Header() {
               Contact
             </span>
           </li>
+          <div className="lnk-ctnr">
+            <a
+              className="hdr-lnk"
+              href="https://www.facebook.com/people/Bluediamond-Studio/100063626148311/"
+              target="_blank"
+            >
+              <GrFacebookOption className="icon" />
+            </a>
 
-          <a
-            className="hdr-lnk"
-            href="https://www.facebook.com/people/Bluediamond-Studio/100063626148311/"
-            target="_blank"
-          >
-            <GrFacebookOption className="icon" />
-          </a>
-
-          <a
-            className="hdr-lnk"
-            target="_blank"
-            href="https://www.instagram.com/bluediamond.estudio/"
-          >
-            <RxInstagramLogo className="icon" />
-          </a>
+            <a
+              className="hdr-lnk"
+              target="_blank"
+              href="https://www.instagram.com/bluediamond.estudio/"
+            >
+              <RxInstagramLogo className="icon" />
+            </a>
+          </div>
 
           <li className="nv-itm">
             Blue Diamond Studio <br /> 2022

@@ -17,7 +17,7 @@ function Footer() {
       case "/":
         localStorage.setItem("HandleSection", "1");
         navigate("/");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
@@ -25,7 +25,7 @@ function Footer() {
       case "/products":
         localStorage.setItem("HandleSection", "2");
         navigate("/products");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
@@ -33,7 +33,6 @@ function Footer() {
       case "/services":
         localStorage.setItem("HandleSection", "3");
         navigate("/services");
-        window.location.reload(true);
         setHandleMobileMenu(false);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
@@ -47,7 +46,6 @@ function Footer() {
       case "/about":
         localStorage.setItem("HandleSection", "4");
         navigate("/about");
-        window.location.reload(true);
         setHandleMobileMenu(false);
         setHandleMenuSection("e");
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -57,7 +55,6 @@ function Footer() {
       case "/contact":
         localStorage.setItem("HandleSection", "5");
         navigate("/contact");
-        window.location.reload(true);
         setHandleMobileMenu(!handleMobileMenu);
         setHandleMenuSection("f");
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

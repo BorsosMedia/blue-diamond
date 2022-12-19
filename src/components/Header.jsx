@@ -71,21 +71,21 @@ function Header() {
       case "/":
         localStorage.setItem("HandleSection", "1");
         navigate("/");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
 
         break;
       case "/products":
         localStorage.setItem("HandleSection", "2");
         navigate("/products");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
 
         break;
       case "/services":
         localStorage.setItem("HandleSection", "3");
         navigate("/services");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
 
         break;
@@ -98,7 +98,7 @@ function Header() {
       case "/about":
         localStorage.setItem("HandleSection", "4");
         navigate("/about");
-        window.location.reload(true);
+
         setHandleMobileMenu(false);
         setHandleMenuSection("e");
         break;
@@ -106,7 +106,7 @@ function Header() {
       case "/contact":
         localStorage.setItem("HandleSection", "5");
         navigate("/contact");
-        window.location.reload(true);
+
         setHandleMobileMenu(!handleMobileMenu);
         setHandleMenuSection("f");
         break;

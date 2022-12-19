@@ -2,8 +2,13 @@ import BookA from "../assets/BookA.png";
 import BookB from "../assets/BookB.png";
 import BookC from "../assets/BookC.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useEffect } from "react";
 
 function ProductsScreen() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <section className="ctnr prd-ctnr">

@@ -20,8 +20,9 @@ function Header() {
   const location = useLocation();
 
   const anmRef = useRef(null);
-  const [handleMobileMenu, setHandleMobileMenu] = useState(true);
-  const [HandleMenuSection, setHandleMenuSection] = useState("a");
+  const initialSection = localStorage.getItem("HandleSection") ?? "1";
+  const [handleMobileMenu, setHandleMobileMenu] = useState(false);
+  const [HandleMenuSection, setHandleMenuSection] = useState(initialSection);
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
@@ -64,42 +65,54 @@ function Header() {
     }
   }, [handleMobileMenu]);
 
-  useEffect(() => {
-    switch (location.pathname) {
+  /*  useEffect(() => { */
+  function handleNavRoute(nav) {
+    switch (nav) {
       case "/":
+        localStorage.setItem("HandleSection", "1");
         navigate("/");
+        window.location.reload(true);
         setHandleMobileMenu(false);
-        setHandleMenuSection("a");
+
         break;
       case "/products":
+        localStorage.setItem("HandleSection", "2");
         navigate("/products");
+        window.location.reload(true);
         setHandleMobileMenu(false);
-        setHandleMenuSection("b");
+
         break;
       case "/services":
+        localStorage.setItem("HandleSection", "3");
         navigate("/services");
+        window.location.reload(true);
         setHandleMobileMenu(false);
-        setHandleMenuSection("c");
+
         break;
-     /*  case "/blog":
+      /*  case "/blog":
         navigate("/blog");
         setHandleMobileMenu(false);
         setHandleMenuSection("d");
 
         break; */
       case "/about":
+        localStorage.setItem("HandleSection", "4");
         navigate("/about");
+        window.location.reload(true);
         setHandleMobileMenu(false);
         setHandleMenuSection("e");
         break;
 
       case "/contact":
+        localStorage.setItem("HandleSection", "5");
         navigate("/contact");
+        window.location.reload(true);
         setHandleMobileMenu(!handleMobileMenu);
         setHandleMenuSection("f");
         break;
     }
-  }, [location.pathname]);
+  }
+  /* }, [location.pathname]); */
 
   return (
     <div className="hdr-ctnr">
@@ -115,39 +128,63 @@ function Header() {
       </div>
       <nav className="nv-wrppr">
         <ul className="nv-ctnr">
-          <li className="nv-itm" onClick={() => navigate("/")}>
+          <li className="nv-itm" onClick={() => handleNavRoute("/")}>
             <MdHomeFilled
-              className={HandleMenuSection === "a" ? "icon icon-act" : "icon"}
+              className={
+                localStorage.getItem("HandleSection") === "1"
+                  ? "icon icon-act"
+                  : "icon"
+              }
             />
             <span
-              className={HandleMenuSection === "a" ? "nv-itm-act" : undefined}
+              className={
+                localStorage.getItem("HandleSection") === "1"
+                  ? "nv-itm-act"
+                  : undefined
+              }
             >
               Home
             </span>
           </li>
-          <li className="nv-itm" onClick={() => navigate("products")}>
+          <li className="nv-itm" onClick={() => handleNavRoute("/products")}>
             <MdShoppingCart
-              className={HandleMenuSection === "b" ? "icon icon-act" : "icon"}
+              className={
+                localStorage.getItem("HandleSection") === "2"
+                  ? "icon icon-act"
+                  : "icon"
+              }
             />
             <span
-              className={HandleMenuSection === "b" ? "nv-itm-act" : undefined}
+              className={
+                localStorage.getItem("HandleSection") === "2"
+                  ? "nv-itm-act"
+                  : undefined
+              }
             >
               Products
             </span>
           </li>
 
-          <li className="nv-itm" onClick={() => navigate("services")}>
+          <li className="nv-itm" onClick={() => handleNavRoute("/services")}>
             <GiWeightLiftingUp
-              className={HandleMenuSection === "c" ? "icon icon-act" : "icon"}
+              className={
+                localStorage.getItem("HandleSection") === "3"
+                  ? "icon icon-act"
+                  : "icon"
+              }
             />
             <span
-              className={HandleMenuSection === "c" ? "nv-itm-act" : undefined}
+              className={
+                localStorage.getItem("HandleSection") === "3"
+                  ? "nv-itm-act"
+                  : undefined
+              }
             >
               Services
             </span>
           </li>
 
-        {/*   <li className="nv-itm" onClick={() => navigate("blog")}>
+          {/*   <li className="nv-itm" onClick={() => navigate("blog")}>
             <FaBlogger
               className={HandleMenuSection === "d" ? "icon icon-act" : "icon"}
             />
@@ -158,22 +195,38 @@ function Header() {
             </span>
           </li> */}
 
-          <li className="nv-itm" onClick={() => navigate("about")}>
+          <li className="nv-itm" onClick={() => handleNavRoute("/about")}>
             <MdPerson
-              className={HandleMenuSection === "e" ? "icon icon-act" : "icon"}
+              className={
+                localStorage.getItem("HandleSection") === "4"
+                  ? "icon icon-act"
+                  : "icon"
+              }
             />
             <span
-              className={HandleMenuSection === "e" ? "nv-itm-act" : undefined}
+              className={
+                localStorage.getItem("HandleSection") === "4"
+                  ? "nv-itm-act"
+                  : undefined
+              }
             >
               About us
             </span>
           </li>
-          <li className="nv-itm" onClick={() => navigate("contact")}>
+          <li className="nv-itm" onClick={() => handleNavRoute("/contact")}>
             <MdPhone
-              className={HandleMenuSection === "f" ? "icon icon-act" : "icon"}
+              className={
+                localStorage.getItem("HandleSection") === "5"
+                  ? "icon icon-act"
+                  : "icon"
+              }
             />
             <span
-              className={HandleMenuSection === "f" ? "nv-itm-act" : undefined}
+              className={
+                localStorage.getItem("HandleSection") === "5"
+                  ? "nv-itm-act"
+                  : undefined
+              }
             >
               Contact
             </span>

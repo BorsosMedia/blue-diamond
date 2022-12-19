@@ -29,7 +29,7 @@ function Cursor() {
       xSet(pos.x);
       ySet(pos.y);
     });
-
+    /* 
     const hvrTarget = document.querySelector(".bttn");
     const cursor = document.querySelector("#cursor");
 
@@ -41,8 +41,8 @@ function Cursor() {
 
     hvrTarget.addEventListener('mouseleave', (e) => {
       cursor.classList.remove("crs-act")
-    });
-  },[])
+    }); */
+  }, []);
   return <div id="cursor" className="crs"></div>;
 }
 

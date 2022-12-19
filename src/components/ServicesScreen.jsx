@@ -1,12 +1,14 @@
-import { FaLongArrowAltRight } from "react-icons/fa";
+import poly1 from "../assets/poly1.png";
+import poly2 from "../assets/poly2.png";
+import poly3 from "../assets/poly3.png";
+import poly4 from "../assets/poly4.png";
 function ServicesScreen() {
   return (
     <>
       <section className="ctnr prm-ctnr">
         <div>
           <h2 className="main-ttl">
-            How to Get 
-            the Body <br/> of Your Dreams
+            How to Get the Body <br /> of Your Dreams
           </h2>
           <p className="txt">
             Controlling what we eat is a key part of any weight loss program,
@@ -33,7 +35,7 @@ function ServicesScreen() {
         </div>
       </section>
       <section className="ctnr pgrm-srv">
-        <div>
+        <div className="mdl-txt">
           <h4 className="main-ttl">Change your life in only 6 weeks</h4>
           <ul>
             <li>
@@ -54,63 +56,84 @@ function ServicesScreen() {
         <div className="grd-mdl">
           <h4 className="main-ttl">Our Program Is Divided Into Four Modules</h4>
           <div className="mdl">
-            <h5 className="mdl-nm">
-              <span>1</span>st Module: Goal Setting
-            </h5>
-            <ul>
-              <li>Learn why you are embarking upon this journey.</li>
-              <li>
-                Learn how to set specific, measurable, and attainable goals with
-                specific timelines.
-              </li>
-              <li>
-                Identify causes of weight gain and develop strategies to avoid
-                weight-gain related stress.
-              </li>
-            </ul>
+            <div className="mdl-txt">
+              <h5 className="mdl-nm">
+                <span>1</span>st Module: Goal Setting
+              </h5>
+              <ul>
+                <li>Learn why you are embarking upon this journey.</li>
+                <li>
+                  Learn how to set specific, measurable, and attainable goals
+                  with specific timelines.
+                </li>
+                <li>
+                  Identify causes of weight gain and develop strategies to avoid
+                  weight-gain related stress.
+                </li>
+              </ul>
+            </div>
+            <div className="mdl-poly">
+              <img src={poly1} alt="" />
+            </div>
           </div>
           <div className="mdl">
-            <h5 className="mdl-nm">
-              <span>2</span>nd Module: Brain Chemistry
-            </h5>
-            <ul>
-              <li>
-                Learn how to avoid/control cravings, food addiction and
-                emotional eating by fixing your brain chemistry and choosing the
-                right types of food.
-              </li>
-              <li>
-                Learn the best times to eat certain foods to support your weight
-                loss journey.
-              </li>
-            </ul>
+            <div className="mdl-poly">
+              <img src={poly2} alt="" />
+            </div>
+            <div className="mdl-txt">
+              <h5 className="mdl-nm">
+                <span>2</span>nd Module: Brain Chemistry
+              </h5>
+              <ul>
+                <li>
+                  Learn how to avoid/control cravings, food addiction and
+                  emotional eating by fixing your brain chemistry and choosing
+                  the right types of food.
+                </li>
+                <li>
+                  Learn the best times to eat certain foods to support your
+                  weight loss journey.
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="mdl">
-            <h5 className="mdl-nm">
-              <span>3</span>rd module: Nutrition & Metabolism
-            </h5>
-            <ul>
-              <li>
-                Learn about portion control (meal plans and portion sizes
-                customized to the client’s needs)
-              </li>
-              <li>Learn which types of food can boost your metabolism.</li>
-              <li>Learn how to lose and maintain a healthy weight.</li>
-              <li>
-                Get nutrition tips for breakfast, lunch, and dinner examples.
-              </li>
-            </ul>
+            <div className="mdl-txt">
+              <h5 className="mdl-nm">
+                <span>3</span>rd module: Nutrition & Metabolism
+              </h5>
+              <ul>
+                <li>
+                  Learn about portion control (meal plans and portion sizes
+                  customized to the client’s needs)
+                </li>
+                <li>Learn which types of food can boost your metabolism.</li>
+                <li>Learn how to lose and maintain a healthy weight.</li>
+                <li>
+                  Get nutrition tips for breakfast, lunch, and dinner examples.
+                </li>
+              </ul>
+            </div>
+            <div className="mdl-poly">
+              <img src={poly3} alt="" />
+            </div>
           </div>
           <div className="mdl">
-            <h5 className="mdl-nm">
-              <span>4</span>th Module: Scientific Knowledge
-            </h5>
-            <ul>
-              <li>
-                Learn scientifically supported ways to improve gut microbiome to
-                enhance overall health, digestion, hormones, sleep, and mood.
-              </li>
-            </ul>
+            <div className="mdl-poly">
+              <img src={poly4} alt="" />
+            </div>
+            <div className="mdl-txt">
+              <h5 className="mdl-nm">
+                <span>4</span>th Module: Scientific Knowledge
+              </h5>
+              <ul>
+                <li>
+                  Learn scientifically supported ways to improve gut microbiome
+                  to enhance overall health, digestion, hormones, sleep, and
+                  mood.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div>

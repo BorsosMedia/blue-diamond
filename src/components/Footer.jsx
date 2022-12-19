@@ -9,7 +9,7 @@ function Footer() {
 
   function handleFooterNav(dest) {
     navigate(`${dest}`);
-    window.location.reload(false);
+    window.location.reload(true);
   }
   return (
     <div className="ftr-ctnr">
@@ -20,7 +20,7 @@ function Footer() {
           Blue Diamond Studio
           <br />
           <br /> 556 Upper Wentworth St. <br />
-          Hamilton, ON L9A 4T9, Canada.{" "}
+          Hamilton, ON L9A 4T9, Canada.
         </p>
       </div>
       <ul className="ftr-lst">
@@ -40,12 +40,12 @@ function Footer() {
         >
           Services
         </li>
-        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/aboutme")}>
+        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/about")}>
           About me
         </li>
-        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/blog")}>
+        {/*     <li className="ftr-lst-itm" onClick={() => handleFooterNav("/blog")}>
           Blog
-        </li>
+        </li> */}
         <li className="ftr-lst-itm" onClick={() => handleFooterNav("/contact")}>
           Contact
         </li>

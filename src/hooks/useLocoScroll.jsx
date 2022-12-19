@@ -7,17 +7,21 @@ gsap.registerPlugin(ScrollTrigger);
 export default function useLocoScroll() {
   useEffect(() => {
     const locoScroll = new LocomotiveScroll({
-      el: document.querySelector("#app-ctnr"),
+      el: document.querySelector("[data-scroll-container]"),
       smooth: true,
       smoothMobile: false,
-      scrollbarContainer: false,
-      multiplier: 1,
     });
 
     new ResizeObserver(() => locoScroll.update()).observe(
       document.querySelector("#app-ctnr")
     );
     locoScroll.on("scroll", ScrollTrigger.update);
+
+    locoScroll.scrollTo("top", {
+      offset: 0,
+      duration: 600,
+      easing: [0.25, 0.0, 0.35, 1.0],
+    });
 
     ScrollTrigger.scrollerProxy("#app-ctnr", {
       scrollTop(value) {

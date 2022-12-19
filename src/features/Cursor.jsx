@@ -29,19 +29,6 @@ function Cursor() {
       xSet(pos.x);
       ySet(pos.y);
     });
-    /* 
-    const hvrTarget = document.querySelector(".bttn");
-    const cursor = document.querySelector("#cursor");
-
-    
-    hvrTarget.addEventListener('mouseenter', (e) => {
-      cursor.classList.add("crs-act")
-    });
-
-
-    hvrTarget.addEventListener('mouseleave', (e) => {
-      cursor.classList.remove("crs-act")
-    }); */
   }, []);
   return <div id="cursor" className="crs"></div>;
 }

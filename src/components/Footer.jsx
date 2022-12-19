@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import logoImg from "../assets/BlueDiamond_Logo.png";
 import { GrFacebookOption } from "react-icons/gr";
@@ -6,11 +7,34 @@ import { RxInstagramLogo } from "react-icons/rx";
 
 function Footer() {
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const [FooterLocation, setFooterLocation] = useState("a");
   function handleFooterNav(dest) {
     navigate(`${dest}`);
     window.location.reload(true);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/home":
+        setFooterLocation("a");
+        break;
+      case "/products":
+        setFooterLocation("b");
+        break;
+      case "/services":
+        setFooterLocation("c");
+        break;
+      case "/about":
+        setFooterLocation("d");
+        break;
+      case "/contact":
+        setFooterLocation("e");
+        break;
+    }
+  }, []);
+
   return (
     <div className="ftr-ctnr">
       <div className="ctc-ctnr">
@@ -25,28 +49,57 @@ function Footer() {
       </div>
       <ul className="ftr-lst">
         <h4 className="ftr-hdr">Quick Links</h4>
-        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/")}>
+        <li
+          className={
+            FooterLocation === "a"
+              ? "ftr-lst-itm ftr-lst-itm-act"
+              : "ftr-lst-itm"
+          }
+          onClick={() => handleFooterNav("/")}
+        >
           Home
         </li>
         <li
-          className="ftr-lst-itm"
+          className={
+            FooterLocation === "b"
+              ? "ftr-lst-itm ftr-lst-itm-act"
+              : "ftr-lst-itm"
+          }
           onClick={() => handleFooterNav("/products")}
         >
           Products
         </li>
         <li
-          className="ftr-lst-itm"
+          className={
+            FooterLocation === "c"
+              ? "ftr-lst-itm ftr-lst-itm-act"
+              : "ftr-lst-itm"
+          }
           onClick={() => handleFooterNav("/services")}
         >
           Services
         </li>
-        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/about")}>
+        <li
+          className={
+            FooterLocation === "d"
+              ? "ftr-lst-itm ftr-lst-itm-act"
+              : "ftr-lst-itm"
+          }
+          onClick={() => handleFooterNav("/about")}
+        >
           About me
         </li>
         {/*     <li className="ftr-lst-itm" onClick={() => handleFooterNav("/blog")}>
           Blog
         </li> */}
-        <li className="ftr-lst-itm" onClick={() => handleFooterNav("/contact")}>
+        <li
+          className={
+            FooterLocation === "e"
+              ? "ftr-lst-itm ftr-lst-itm-act"
+              : "ftr-lst-itm"
+          }
+          onClick={() => handleFooterNav("/contact")}
+        >
           Contact
         </li>
       </ul>

@@ -50,7 +50,9 @@ a {
   --pmr-clr: #4286e8;
   --sdy-clr: #ffd731;
   --th-clr: #e5f0ff;
-  --bx-shw: 0 20px 50px -25px black;
+  --bx-shw: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  /* --bx-shw: 0 20px 50px -25px black; */
 
   --trns: 400ms;
 
@@ -83,6 +85,15 @@ a {
   overflow: hidden;
   position: relative;
   padding: 2rem 1rem;
+  border-radius: 10rem 0 0 0;
+}
+.scnd-ctnr .bttn-pmr {
+  background-color: var(--sdy-clr);
+}
+.scnd-ctnr .bttn-sdy {
+  background-color: var(--clr);
+  border: none;
+  color: #ffff;
 }
 .scnd-ctnr .main-ttl {
   grid-area: sttl;
@@ -100,7 +111,7 @@ a {
     "sttl sttl sttl sttl"
     "txt txt txt txt"
     "sdy sdy pmr pmr";
-  justify-items: center;
+  justify-items: end;
 }
 .img-bk {
   width: 100%;
@@ -143,6 +154,7 @@ a {
 }
 .fth-ctnr .bttn {
   margin-top: 2rem;
+  color: var(--pmr-clr);
 }
 .frth-ctnr .scss-strs {
   background: url(./assets/scss-strs.png);
@@ -213,9 +225,9 @@ a {
   );
 
   width: 100%;
-  /*   position: relative; */
+  position: fixed;
 
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -277,6 +289,19 @@ a {
   color: var(--clr);
   width: initial;
   cursor: pointer;
+}
+.hdr-lnk {
+  list-style: none;
+  background-color: #ffff;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  height: 2.1rem;
+  width: 2.1rem;
+  color: #105dcc;
+}
+.hdr-lnk a {
+  color: var(--pmr-clr);
 }
 .nv-itm-act {
   color: var(--sdy-clr) !important;
@@ -345,7 +370,7 @@ a {
   color: #ffff;
 }
 .logoImg {
-  height: 2.5rem;
+  height: 3rem;
 }
 
 .main-ttl {
@@ -468,19 +493,24 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 2rem !important;
+
   align-items: center;
   gap: 1rem;
-
-  background: linear-gradient(
+  /* border-radius: 0 0 10rem 0; */
+  /*  background: linear-gradient(
     90deg,
     rgba(29, 160, 231, 1) 0%,
     rgba(45, 108, 200, 1) 47%,
     rgba(16, 93, 204, 1) 100%
   );
-
+ */
+  background: url(./assets/hero_bg_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
+  width: 100%;
   min-height: 90vh;
-  margin-top: 0 !important;
+  margin-top: 60px !important;
   margin-bottom: 0 !important;
   padding: 0 1rem;
 }
@@ -596,6 +626,7 @@ a {
 .thrd-ctnr .bttn-pmr {
   background-color: var(--sdy-clr);
   box-shadow: 0 20px 50px -25px var(--sdy-clr);
+  color: var(--pmr-clr);
 }
 .thrd-ctnr .txt {
   color: #ffff;
@@ -716,6 +747,10 @@ a {
   font-family: NexaRegular;
   cursor: pointer;
   margin-bottom: 0.5rem;
+}
+.ftr-lst-itm-act {
+  color: var(--sdy-clr);
+  font-family: NexaBold;
 }
 .ftr-lg-img {
   align-self: center;
@@ -918,7 +953,7 @@ a {
 .prgrm-srv ul li {
   margin-bottom: 1rem;
 }
-/* GSAP STYLES */
+/* GSAP STYLES */ /* 
 .bttn-lnk {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
@@ -935,7 +970,7 @@ a {
 #ttlB {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transform: translate(0, 3rem);
-}
+} */
 
 /*  */
 
@@ -1399,6 +1434,7 @@ html.has-scroll-dragging {
     height: initial;
     justify-content: flex-end;
     gap: 1rem;
+    align-items: center;
   }
   .nv-itm span {
     text-align: center;
@@ -1481,9 +1517,11 @@ html.has-scroll-dragging {
   .fst-ctnr {
     padding: 2rem 10%;
   }
-  .fst-ctnr,
-  .hdr-ctnr {
+  .fst-ctnr {
     padding: 0 10%;
+  }
+  .hdr-ctnr {
+    padding: 1.2rem 10%;
   }
   .ftr-lst {
     padding: 0;

@@ -5,7 +5,8 @@ import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logoImg from "../assets/BlueDiamond_Logo.png";
 import { GiWeightLiftingUp } from "react-icons/gi";
-
+import { GrFacebookOption } from "react-icons/gr";
+import { RxInstagramLogo } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import {
   MdHomeFilled,
@@ -24,29 +25,28 @@ function Header() {
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
   const [HandleMenuSection, setHandleMenuSection] = useState(initialSection);
   const { lockScroll, unlockScroll } = useScrollLock();
-
+  console.log(HandleMenuSection);
   useEffect(() => {
     anmRef.current = gsap.timeline({
       defaults: { ease: Expo.easeInOut },
     });
 
-    anmRef.current
-      .to(".nv-wrppr", {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    anmRef.current.to(".nv-wrppr", {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 
-        duration: 0.6,
+      duration: 0.6,
 
-        stagger: 0.3,
-        top: "0",
-      })
-      .fromTo(
+      stagger: 0.3,
+      top: "0",
+    });
+    /* .fromTo(
         ".nv-itm",
         {
           y: 20,
           opacity: 0,
         },
         { stagger: 0.04, y: 20, opacity: 1 }
-      );
+      ); */
 
     return () => {
       anmRef.current.kill();
@@ -231,6 +231,22 @@ function Header() {
               Contact
             </span>
           </li>
+
+          <a
+            className="hdr-lnk"
+            href="https://www.facebook.com/people/Bluediamond-Studio/100063626148311/"
+            target="_blank"
+          >
+            <GrFacebookOption className="icon" />
+          </a>
+
+          <a
+            className="hdr-lnk"
+            target="_blank"
+            href="https://www.instagram.com/bluediamond.estudio/"
+          >
+            <RxInstagramLogo className="icon" />
+          </a>
 
           <li className="nv-itm">
             Blue Diamond Studio <br /> 2022

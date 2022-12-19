@@ -1,8 +1,13 @@
 import React from "react";
 import Nelvis from "../assets/Nelvis-str.png";
 import Irma from "../assets/Irma-str.png";
+import { useEffect } from "react";
 
 function AboutScreen() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <section className="ctnr abt-m-ctnr">

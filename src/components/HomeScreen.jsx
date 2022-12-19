@@ -19,7 +19,9 @@ function HomeScreen() {
   /*   const { cursorChangeHandler } = useContext(MouseContext); */
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: Expo.easeInOut } });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+    /*   const tl = gsap.timeline({ defaults: { ease: Expo.easeInOut } });
     tl.to(".anm", {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       y: 0,
@@ -38,12 +40,11 @@ function HomeScreen() {
           duration: 1,
         },
         "1.5"
-      )
-      /*  .to(".prgph", { opacity: 0, duration: 1, delay: 2 }) */
-
-      .to(".bttn-lnk", {
+      ) */
+    /*  .to(".prgph", { opacity: 0, duration: 1, delay: 2 }) */
+    /*   .to(".bttn-lnk", {
         /*      x: "1000", */
-        xPercent: 100,
+    /*     xPercent: 100,
         duration: 5,
 
         scrollTrigger: {
@@ -63,8 +64,7 @@ function HomeScreen() {
           start: "top center",
           scrub: 3,
         },
-      });
-
+      }); */
     /* gsap.to(".column2", {
       y: 500,
       opacity: 0,
@@ -75,7 +75,7 @@ function HomeScreen() {
         scrub: 4,
       },
     }); */
-    gsap.to("#Aitm", {
+    /* gsap.to("#Aitm", {
       y: 38,
       scrollTrigger: {
         trigger: ".imgs-ctnr",
@@ -120,7 +120,7 @@ function HomeScreen() {
         scroller: "#app-ctnr",
         start: "top 90%",
       },
-    });
+    }); */
     /* 
     gsap.fromTo(
       ".imgs-ctnr",
@@ -162,7 +162,7 @@ function HomeScreen() {
           <h1 className="main-ttl anm" id="ttl-a">
             Change your body
           </h1>
-          <h1 className="main-ttl anm" id="ttl-a">
+          <h1 className="main-ttl anm" id="ttl-a" style={{ color: "#ffd731" }}>
             Change your mind
           </h1>
           {/*   <div className="hr-img-ctnr">

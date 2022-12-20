@@ -40,8 +40,11 @@ function ServicesScreen() {
         </div>
       </section>
       <section className="ctnr pgrm-srv">
-        <div className="mdl-txt">
-          <h4 className="main-ttl">Change your life in only 6 weeks</h4>
+        <div className="mdl-txt bx-shdw">
+          <h4 className="main-ttl">
+            Change your life in only <br />
+            <span className="amithen">6 weeks</span>
+          </h4>
           <ul>
             <li>
               Two weekly coaching sessions via Zoom, Whatsapp, Messenger,
@@ -62,9 +65,15 @@ function ServicesScreen() {
           <h4 className="main-ttl">Our Program Is Divided Into Four Modules</h4>
           <div className="mdl">
             <div className="mdl-txt">
-              <h5 className="mdl-nm">
-                <span>1</span>st Module: Goal Setting
-              </h5>
+              <div className="fst-dvv">
+                <div className="mdl-poly-tp">
+                  <img src={poly1} alt="" />
+                </div>
+                <h5 className="mdl-nm">
+                  <span>1</span>st Module: Goal Setting
+                </h5>
+              </div>
+
               <ul>
                 <li>Learn why you are embarking upon this journey.</li>
                 <li>
@@ -77,18 +86,26 @@ function ServicesScreen() {
                 </li>
               </ul>
             </div>
+
             <div className="mdl-poly">
               <img src={poly1} alt="" />
             </div>
           </div>
+
           <div className="mdl">
             <div className="mdl-poly">
               <img src={poly2} alt="" />
             </div>
+
             <div className="mdl-txt">
-              <h5 className="mdl-nm">
-                <span>2</span>nd Module: Brain Chemistry
-              </h5>
+              <div className="fst-dvv">
+                <div className="mdl-poly-tp">
+                  <img src={poly2} alt="" />
+                </div>
+                <h5 className="mdl-nm">
+                  <span>2</span>nd Module: Brain Chemistry
+                </h5>
+              </div>
               <ul>
                 <li>
                   Learn how to avoid/control cravings, food addiction and
@@ -104,9 +121,14 @@ function ServicesScreen() {
           </div>
           <div className="mdl">
             <div className="mdl-txt">
-              <h5 className="mdl-nm">
-                <span>3</span>rd module: Nutrition & Metabolism
-              </h5>
+              <div className="fst-dvv">
+                <div className="mdl-poly-tp">
+                  <img src={poly3} alt="" />
+                </div>
+                <h5 className="mdl-nm">
+                  <span>3</span>rd Module: Nutrition & Metabolism
+                </h5>
+              </div>
               <ul>
                 <li>
                   Learn about portion control (meal plans and portion sizes
@@ -128,9 +150,14 @@ function ServicesScreen() {
               <img src={poly4} alt="" />
             </div>
             <div className="mdl-txt">
-              <h5 className="mdl-nm">
-                <span>4</span>th Module: Scientific Knowledge
-              </h5>
+              <div className="fst-dvv">
+                <div className="mdl-poly-tp">
+                  <img src={poly4} alt="" />
+                </div>
+                <h5 className="mdl-nm">
+                  <span>4</span>th Module: Scientific Knowledge
+                </h5>
+              </div>
               <ul>
                 <li>
                   Learn scientifically supported ways to improve gut microbiome
@@ -141,30 +168,30 @@ function ServicesScreen() {
             </div>
           </div>
         </div>
-        <div>
-          <h3 className="main-ttl">
-            Our 6-Week Weight Loss Program Will Teach How To:
-          </h3>
-          <ul>
-            <li>Lose weight and control your hunger forever.</li>
-            <li>Avoid/control food addiction.</li>
-            <li>
-              Change your brain chemistry and regulate your neurotransmitters to
-              stay focused and motivated by selecting the right types of foods.
-            </li>
-            <li>Portion control. Boost your metabolism.</li>
-            <li>Reset your gut flora.</li>
-            <li>Organize your meals.</li>
-            <li>Stress reducing tools to avoid stress related weight gain.</li>
-            <li>
-              Activate your ability to make good choices that support your
-              weight loss journey.
-            </li>
-            <li>
-              Incorporate healthy habits and practices daily in your routine.
-            </li>
-          </ul>
-        </div>
+      </section>
+      <section className="ctnr tch-ctnr">
+        <h3 className="main-ttl">
+          Our 6-Week Weight Loss Program Will Teach How To:
+        </h3>
+        <ul>
+          <li>Lose weight and control your hunger forever.</li>
+          <li>Avoid/control food addiction.</li>
+          <li>
+            Change your brain chemistry and regulate your neurotransmitters to
+            stay focused and motivated by selecting the right types of foods.
+          </li>
+          <li>Portion control. Boost your metabolism.</li>
+          <li>Reset your gut flora.</li>
+          <li>Organize your meals.</li>
+          <li>Stress reducing tools to avoid stress related weight gain.</li>
+          <li>
+            Activate your ability to make good choices that support your weight
+            loss journey.
+          </li>
+          <li>
+            Incorporate healthy habits and practices daily in your routine.
+          </li>
+        </ul>
       </section>
     </>
   );

@@ -14,13 +14,13 @@ import Contact from "./components/Contact";
 import BlogScreen from "./components/BlogScreen";
 import { useEffect } from "react";
 
-/* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
-
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   /* 
     El texto es NexaRegular, y la fuente deberia ser Nexa Light
-
+  Bullet point color black, last paragraph changed bg, product hero changed, first sentence changes,
+  blue diamond about us changes, colorful thing on the services area mobile version change,
+  products hero img gradient
 
 */
 

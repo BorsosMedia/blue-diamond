@@ -21,9 +21,9 @@ function Header() {
   const location = useLocation();
 
   const anmRef = useRef(null);
-  const initialSection = localStorage.getItem("HandleSection") ?? "1";
+
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
-  const [HandleMenuSection, setHandleMenuSection] = useState(initialSection);
+  const [HandleMenuSection, setHandleMenuSection] = useState("a");
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
@@ -71,44 +71,49 @@ function Header() {
       case "/":
         localStorage.setItem("HandleSection", "1");
         navigate("/");
-
+        setHandleMenuSection("a");
         setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/products":
         localStorage.setItem("HandleSection", "2");
         navigate("/products");
+        setHandleMenuSection("b");
 
         setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/services":
         localStorage.setItem("HandleSection", "3");
         navigate("/services");
+        setHandleMenuSection("c");
 
         setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
-      /*  case "/blog":
-        navigate("/blog");
-        setHandleMobileMenu(false);
-        setHandleMenuSection("d");
 
-        break; */
       case "/about":
         localStorage.setItem("HandleSection", "4");
         navigate("/about");
+        setHandleMenuSection("d");
 
         setHandleMobileMenu(false);
         setHandleMenuSection("e");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
         break;
 
       case "/contact":
         localStorage.setItem("HandleSection", "5");
         navigate("/contact");
 
-        setHandleMobileMenu(!handleMobileMenu);
+        setHandleMobileMenu(false);
         setHandleMenuSection("f");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
         break;
     }
   }

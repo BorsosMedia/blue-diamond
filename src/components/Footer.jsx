@@ -68,22 +68,27 @@ function Footer() {
     switch (location.pathname) {
       case "/home":
         setFooterLocation("a");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/products":
         setFooterLocation("b");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/services":
         setFooterLocation("c");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/about":
         setFooterLocation("d");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/contact":
         setFooterLocation("e");
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
     }

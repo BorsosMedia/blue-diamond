@@ -1,16 +1,15 @@
 import { useEffect } from "react";
 
-import gridImg from "../assets/gridImg.jpg";
-import gridImg2 from "../assets/gridImg2.jpg";
-import gridImg3 from "../assets/gridImg3.jpg";
+import gridImg from "../assets/3-bottles.png";
+import gridImg2 from "../assets/BookA.png";
+import gridImg3 from "../assets/BookC.png";
+import gridImg4 from "../assets/Biofit3.png";
 import bookImg from "../assets/Book2.png";
 
-import { gsap, Expo } from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { useNavigate } from "react-router-dom";
-
-import { FaLongArrowAltRight, FaAmazon, FaShoppingCart } from "react-icons/fa";
+import { FaAmazon, FaShoppingCart } from "react-icons/fa";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
@@ -237,16 +236,16 @@ function HomeScreen() {
         </p>
         <div className="imgs-ctnr">
           <div id="Aitm">
-            <img src={gridImg2} alt="" className="grid-img" />
+            <img src={gridImg} alt="" className="grid-img" />
           </div>
           <div id="Bitm">
-            <img src={gridImg} alt="" className="grid-img" />
+            <img src={gridImg2} alt="" className="grid-img" />
           </div>
           <div id="Citm">
             <img src={gridImg3} alt="" className="grid-img" />
           </div>
           <div id="Bitm">
-            <img src={gridImg} alt="" className="grid-img" />
+            <img src={gridImg4} alt="" className="grid-img" />
           </div>
         </div>
         <button className="bttn bttn-try">

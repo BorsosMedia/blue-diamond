@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import BookA from "../assets/BookA.png";
 import BookB from "../assets/BookB.png";
 import BookC from "../assets/BookC.png";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { useEffect } from "react";
+import BioFit from "../assets/Biofit3.png";
+import Resvatone from "../assets/3-bottles.png";
 
 function ProductsScreen() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function ProductsScreen() {
         </p>
       </section>
 
-      <section className="ctnr wgh-ls">
+      {/*  <section className="ctnr wgh-ls">
         <h2 className="main-ttl">Effective Weight Loss</h2>
         <p className="txt">
           If you’re looking for an effective way to lose weight and maintain
@@ -31,8 +32,9 @@ function ProductsScreen() {
           books, based on decades of experience in fitness and Liset’s knowledge
           as a scientist.
         </p>
-      </section>
+      </section> */}
       <section className="ctnr prd-itm-ctnr">
+        <h3 className="main-ttl">Books</h3>
         <div className="itm-ctnr">
           <div className="prd-img-ctnr">
             <img src={BookA} alt="" />
@@ -59,7 +61,7 @@ function ProductsScreen() {
           <div className="prd-dsc">
             <h4>Eat, Drink. Be Mindful - Food Journal and activity book.</h4>
             <p>
-              It’s the simplest way to track your eating and exercise habits
+              It’s the simplest way to track your eating and exercising habits
               that will help you maintain focus on reaching your fitness goals.
             </p>
             <button className="bttn bttn-try">
@@ -81,6 +83,54 @@ function ProductsScreen() {
             <button className="bttn bttn-try">
               Buy here {/* <FaLongArrowAltRight className="icon" /> */}
             </button>
+          </div>
+        </div>
+      </section>
+      <section className="ctnr skn-prd-ctnr">
+        <h4 className="main-ttl">Skin/Weight Loss Products</h4>
+        <div className="skn-ctnr">
+          <div className="prd-img">
+            <img src={Resvatone} alt="" />
+          </div>
+          <h5 className="main-ttl">Resvatone</h5>
+          <div className="skn-prd-txt">
+            <p className="txt">
+              Resveratone revolves around the main ingredient of Resveratrol,
+              sourced from a traditional Japanese herb.
+              <br />
+              <br />
+              This wonderpill targets the root cause of weight gain using the
+              most powerful team of ingredients to burn away all of your excess
+              belly fat, help you fight anxiety and cognitive decay, help you
+              lower your cholesterol and blood pressure, and eliminate
+              debilitating joint pain.
+              <br />
+              <br />
+              Secure Your Package While Stock Lasts
+              <br />
+              *Doctor Recommended*
+            </p>
+            <button className="bttn bttn-try">Buy Here</button>
+          </div>
+        </div>
+        <div className="skn-ctnr">
+          <div className="prd-img">
+            <img src={BioFit} alt="" />
+          </div>
+          <h5 className="main-ttl">BioFit</h5>
+          <div className="skn-prd-txt">
+            <p className="txt">
+              BioFit represents the next generation of fat-burning science. This
+              formula provides the purest, highest grade of 7 “Miracle Microbes”
+              that will balance your gut flora and improve your overall health.
+              <br />
+              <br />
+              Scientific research and trials show that the natural blend of all
+              good “microbes” will help significantly boost weight loss without
+              giving up the foods you love. It will supercharge your energy, and
+              make you feel and look better.
+            </p>
+            <button className="bttn bttn-try">Buy Here</button>
           </div>
         </div>
       </section>

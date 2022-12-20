@@ -14,6 +14,7 @@ function ProductsScreen() {
     <>
       <section className="ctnr prd-ctnr">
         {/* <div className="lnr-prd"></div> */}
+        <div className="prd-grd"></div>
         <h2 className="main-ttl">The change starts in you</h2>
         <p className="txt">
           Living a healthier lifestyle is not ALL about exercise, but also about
@@ -92,7 +93,7 @@ function ProductsScreen() {
           <div className="prd-img">
             <img src={Resvatone} alt="" />
           </div>
-          <h5 className="main-ttl">Resvatone</h5>
+          <h5 className="main-ttl">Resveratone</h5>
           <div className="skn-prd-txt">
             <p className="txt">
               Resveratone revolves around the main ingredient of Resveratrol,

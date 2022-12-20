@@ -5,35 +5,31 @@ import logoImg from "../assets/BlueDiamond_Logo.png";
 import { GrFacebookOption } from "react-icons/gr";
 import { RxInstagramLogo } from "react-icons/rx";
 
-function Footer() {
+function Footer({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
-  const location = useLocation();
-  const initialSection = localStorage.getItem("HandleSection") ?? "1";
-  const [HandleMenuSection, setHandleMenuSection] = useState(initialSection);
 
-  const [FooterLocation, setFooterLocation] = useState("a");
   function handleFooterNav(nav) {
     switch (nav) {
       case "/":
-        localStorage.setItem("HandleSection", "1");
+        setHandleMenuSection("a");
         navigate("/");
 
-        setHandleMobileMenu(false);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/products":
-        localStorage.setItem("HandleSection", "2");
+        setHandleMenuSection("b");
+
         navigate("/products");
 
-        setHandleMobileMenu(false);
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/services":
-        localStorage.setItem("HandleSection", "3");
+        setHandleMenuSection("c");
+
         navigate("/services");
-        setHandleMobileMenu(false);
+
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
@@ -44,26 +40,25 @@ function Footer() {
   
           break; */
       case "/about":
-        localStorage.setItem("HandleSection", "4");
+        setHandleMenuSection("d");
+
         navigate("/about");
-        setHandleMobileMenu(false);
-        setHandleMenuSection("e");
+
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
 
       case "/contact":
-        localStorage.setItem("HandleSection", "5");
+        setHandleMenuSection("e");
+
         navigate("/contact");
-        setHandleMobileMenu(!handleMobileMenu);
-        setHandleMenuSection("f");
+
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
     }
-    window.location.reload(true);
   }
-
+  /* 
   useEffect(() => {
     switch (location.pathname) {
       case "/home":
@@ -93,7 +88,7 @@ function Footer() {
         break;
     }
   }, []);
-
+ */
   return (
     <div className="ftr-ctnr">
       <div className="ctc-ctnr">
@@ -110,7 +105,7 @@ function Footer() {
         <h4 className="ftr-hdr">Quick Links</h4>
         <li
           className={
-            localStorage.getItem("HandleSection") === "1"
+            HandleMenuSection === "a"
               ? "ftr-lst-itm ftr-lst-itm-act"
               : "ftr-lst-itm"
           }
@@ -120,7 +115,7 @@ function Footer() {
         </li>
         <li
           className={
-            localStorage.getItem("HandleSection") === "2"
+            HandleMenuSection === "b"
               ? "ftr-lst-itm ftr-lst-itm-act"
               : "ftr-lst-itm"
           }
@@ -130,7 +125,7 @@ function Footer() {
         </li>
         <li
           className={
-            localStorage.getItem("HandleSection") === "3"
+            HandleMenuSection === "c"
               ? "ftr-lst-itm ftr-lst-itm-act"
               : "ftr-lst-itm"
           }
@@ -140,7 +135,7 @@ function Footer() {
         </li>
         <li
           className={
-            localStorage.getItem("HandleSection") === "4"
+            HandleMenuSection === "d"
               ? "ftr-lst-itm ftr-lst-itm-act"
               : "ftr-lst-itm"
           }
@@ -153,7 +148,7 @@ function Footer() {
         </li> */}
         <li
           className={
-            localStorage.getItem("HandleSection") === "5"
+            HandleMenuSection === "e"
               ? "ftr-lst-itm ftr-lst-itm-act"
               : "ftr-lst-itm"
           }

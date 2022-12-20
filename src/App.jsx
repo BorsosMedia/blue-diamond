@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useLocoScroll from "./hooks/useLocoScroll";
-import Cursor from "./features/Cursor.jsx";
+/* import useLocoScroll from "./hooks/useLocoScroll";
+import Cursor from "./features/Cursor.jsx"; */
 
 import Header from "./components/Header";
 import HomeScreen from "./components/HomeScreen";
@@ -17,12 +18,13 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   /* 
-    El texto es NexaRegular, y la fuente deberia ser Nexa Light
+   
   Bullet point color black, last paragraph changed bg, product hero changed, first sentence changes,
   blue diamond about us changes, colorful thing on the services area mobile version change,
   products hero img gradient
 
 */
+  const [HandleMenuSection, setHandleMenuSection] = useState("a");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -30,7 +32,10 @@ function App() {
 
   return (
     <main className="App" id="app-ctnr">
-      <Header />
+      <Header
+        HandleMenuSection={HandleMenuSection}
+        setHandleMenuSection={setHandleMenuSection}
+      />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/products" element={<ProductsScreen />} />
@@ -39,7 +44,10 @@ function App() {
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer
+        HandleMenuSection={HandleMenuSection}
+        setHandleMenuSection={setHandleMenuSection}
+      />
     </main>
   );
 }

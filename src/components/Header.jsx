@@ -16,14 +16,13 @@ import {
 } from "react-icons/md";
 gsap.registerPlugin(ScrollTrigger);
 
-function Header() {
+function Header({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
   const location = useLocation();
 
   const anmRef = useRef(null);
 
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
-  const [HandleMenuSection, setHandleMenuSection] = useState("a");
   const { lockScroll, unlockScroll } = useScrollLock();
 
   useEffect(() => {
@@ -135,36 +134,20 @@ function Header() {
         <ul className="nv-ctnr">
           <li className="nv-itm" onClick={() => handleNavRoute("/")}>
             <MdHomeFilled
-              className={
-                localStorage.getItem("HandleSection") === "1"
-                  ? "icon icon-act"
-                  : "icon"
-              }
+              className={HandleMenuSection === "a" ? "icon icon-act" : "icon"}
             />
             <span
-              className={
-                localStorage.getItem("HandleSection") === "1"
-                  ? "nv-itm-act"
-                  : undefined
-              }
+              className={HandleMenuSection === "a" ? "nv-itm-act" : undefined}
             >
               Home
             </span>
           </li>
           <li className="nv-itm" onClick={() => handleNavRoute("/products")}>
             <MdShoppingCart
-              className={
-                localStorage.getItem("HandleSection") === "2"
-                  ? "icon icon-act"
-                  : "icon"
-              }
+              className={HandleMenuSection === "b" ? "icon icon-act" : "icon"}
             />
             <span
-              className={
-                localStorage.getItem("HandleSection") === "2"
-                  ? "nv-itm-act"
-                  : undefined
-              }
+              className={HandleMenuSection === "b" ? "nv-itm-act" : undefined}
             >
               Products
             </span>
@@ -172,18 +155,10 @@ function Header() {
 
           <li className="nv-itm" onClick={() => handleNavRoute("/services")}>
             <GiWeightLiftingUp
-              className={
-                localStorage.getItem("HandleSection") === "3"
-                  ? "icon icon-act"
-                  : "icon"
-              }
+              className={HandleMenuSection === "c" ? "icon icon-act" : "icon"}
             />
             <span
-              className={
-                localStorage.getItem("HandleSection") === "3"
-                  ? "nv-itm-act"
-                  : undefined
-              }
+              className={HandleMenuSection === "c" ? "nv-itm-act" : undefined}
             >
               Services
             </span>
@@ -202,36 +177,20 @@ function Header() {
 
           <li className="nv-itm" onClick={() => handleNavRoute("/about")}>
             <MdPerson
-              className={
-                localStorage.getItem("HandleSection") === "4"
-                  ? "icon icon-act"
-                  : "icon"
-              }
+              className={HandleMenuSection === "d" ? "icon icon-act" : "icon"}
             />
             <span
-              className={
-                localStorage.getItem("HandleSection") === "4"
-                  ? "nv-itm-act"
-                  : undefined
-              }
+              className={HandleMenuSection === "d" ? "nv-itm-act" : undefined}
             >
               About us
             </span>
           </li>
           <li className="nv-itm" onClick={() => handleNavRoute("/contact")}>
             <MdPhone
-              className={
-                localStorage.getItem("HandleSection") === "5"
-                  ? "icon icon-act"
-                  : "icon"
-              }
+              className={HandleMenuSection === "e" ? "icon icon-act" : "icon"}
             />
             <span
-              className={
-                localStorage.getItem("HandleSection") === "5"
-                  ? "nv-itm-act"
-                  : undefined
-              }
+              className={HandleMenuSection === "e" ? "nv-itm-act" : undefined}
             >
               Contact
             </span>

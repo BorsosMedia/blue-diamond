@@ -100,17 +100,16 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
         setHandleMenuSection("d");
 
         setHandleMobileMenu(false);
-        setHandleMenuSection("e");
+
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
 
       case "/contact":
-        localStorage.setItem("HandleSection", "5");
         navigate("/contact");
 
         setHandleMobileMenu(false);
-        setHandleMenuSection("f");
+        setHandleMenuSection("e");
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;

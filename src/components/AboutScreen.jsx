@@ -11,6 +11,7 @@ function AboutScreen() {
   return (
     <>
       <section className="ctnr abt-m-ctnr">
+        <div className="abt-bg"></div>
         <div>
           <h2 className="main-ttl">About Our Founder</h2>
           <p className="txt">

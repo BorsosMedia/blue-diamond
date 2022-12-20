@@ -89,7 +89,19 @@ a {
   overflow: hidden;
   position: relative;
   padding: 2rem 1rem;
-  border-radius: 10rem 0 0 0;
+  background-color: #ffff;
+}
+.hr-hl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  transform: rotate(180deg);
+}
+.hr-hl img {
+  width: 100%;
+  height: 100%;
 }
 .scnd-ctnr .bttn-pmr {
   background-color: var(--sdy-clr);
@@ -504,7 +516,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 2rem !important;
-
+  overflow: hidden;
   align-items: center;
   gap: 1rem;
   border-radius: 0 0 10rem 0;
@@ -651,9 +663,29 @@ a {
   grid-template-rows: 1fr 1fr;
   padding: 2rem 1rem 2rem 1rem;
   margin-top: 60px;
+  background-color: #4084e7;
+  position: relative;
+}
+.abt-bg {
+  position: absolute;
+  right: 0;
+
+  bottom: 0;
+  transform: translate();
+  background: url(assets/abt-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 95%;
 }
 .abt-m-ctnr .main-ttl {
   color: var(--pmr-clr);
+  position: relative;
+  padding: 4rem 10% 0 10%;
+}
+.abt-m-ctnr .txt {
+  position: relative;
+  padding: 0 10%;
 }
 .abt-m-img {
   background: url(assets/liset-abt.png);
@@ -666,6 +698,13 @@ a {
 }
 .abt-m-sc2 {
   background-color: var(--pmr-clr);
+  background: linear-gradient(
+    90deg,
+    rgba(66, 134, 232, 1) 0%,
+    rgba(50, 121, 223, 1) 36%,
+    rgba(16, 93, 204, 1) 56%
+  );
+
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -688,6 +727,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(
+    0deg,
+    rgba(66, 134, 232, 0.4) 0%,
+    rgba(229, 240, 255, 1) 34%
+  );
 }
 .scss-scrn .txt {
   text-align: center;
@@ -1000,6 +1044,7 @@ a {
   content: "•";
   margin-right: 5px;
   font-size: 1.2rem;
+  color: black;
 }
 .pgrm-srv .main-ttl {
   margin-bottom: 1rem;
@@ -1305,6 +1350,15 @@ html.has-scroll-dragging {
 }
 
 @media screen and (min-width: 912px) {
+  .abt-m-ctnr .main-ttl {
+    color: var(--pmr-clr);
+    position: relative;
+    padding-left: 10%;
+  }
+  .abt-m-ctnr .txt {
+    position: relative;
+    padding-left: 10%;
+  }
   .mdl-poly-tp {
     display: none;
   }
@@ -1485,12 +1539,12 @@ html.has-scroll-dragging {
   .mdl-poly {
     display: block;
   }
-  .mdl-poly img {
+  /*   .mdl-poly img {
     min-height: 100% !important;
 
     max-height: 330px !important;
     object-fit: cover;
-  }
+  } */
   .mdl-txt {
     display: flex;
     flex-direction: column;
@@ -1504,12 +1558,14 @@ html.has-scroll-dragging {
   .mdl:nth-of-type(1) .mdl-poly img,
   .mdl.mdl:nth-of-type(3) .mdl-poly img {
     position: absolute;
-
+    height: 200px;
     left: 95%;
   }
   .mdl:nth-of-type(2) .mdl-poly img,
   .mdl.mdl:nth-of-type(4) .mdl-poly img {
     left: -50px;
+    height: 200px;
+    transform: translateX(-35px);
   }
 
   .mdl:nth-of-type(2) {
@@ -1770,9 +1826,9 @@ html.has-scroll-dragging {
   .ctc-scrn-ctnr {
     margin-top: 100px;
   }
-  .mdl-poly {
+  /*   .mdl-poly {
     width: 10rem;
-  }
+  } */
   .skn-prd-txt .txt {
     min-height: 277px;
   }
@@ -1815,5 +1871,12 @@ html.has-scroll-dragging {
   }
   :root {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2338px) {
+  .mdl:nth-of-type(1) .mdl-poly img,
+  .mdl.mdl:nth-of-type(3) .mdl-poly img {
+    transform: translateX(50px) !important;
   }
 }

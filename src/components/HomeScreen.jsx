@@ -5,6 +5,7 @@ import gridImg2 from "../assets/BookA.png";
 import gridImg3 from "../assets/BookC.png";
 import gridImg4 from "../assets/Biofit3.png";
 import bookImg from "../assets/Book2.png";
+import svgH from "../assets/hero-section-helper.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -187,6 +188,9 @@ function HomeScreen() {
         </div>
       </section>
       <section className="ctnr scnd-ctnr">
+        <div className="hr-hl">
+          <img src={svgH} alt="" />
+        </div>
         <div className="bk-hr">
           <img src={bookImg} className="img-bk" alt="" />
         </div>

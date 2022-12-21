@@ -1472,9 +1472,7 @@ html.has-scroll-dragging {
     bottom: 25px;
     /* transform: translateY(-25px); */
   }
-  .skn-prd-txt .txt {
-    min-height: 330px;
-  }
+
   .skn-prd-txt {
     height: min(30vh, 100%);
   }
@@ -1974,9 +1972,7 @@ html.has-scroll-dragging {
   /*   .mdl-poly {
     width: 10rem;
   } */
-  .skn-prd-txt .txt {
-    min-height: 420px;
-  }
+
   .prd-itm-ctnr {
     column-gap: 2%;
     padding: 2rem 5% !important;

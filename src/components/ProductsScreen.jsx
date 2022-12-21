@@ -117,11 +117,6 @@ function ProductsScreen() {
               belly fat, help you fight anxiety and cognitive decay, help you
               lower your cholesterol and blood pressure, and eliminate
               debilitating joint pain.
-              <br />
-              <br />
-              Secure Your Package While Stock Lasts
-              <br />
-              *Doctor Recommended*
             </p>
             <a
               href="https://resveratone.com/transcript?aff_id=42&subid2=7001_sessid20221221210015125&subid=10138"

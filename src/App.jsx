@@ -46,6 +46,19 @@ function App() {
   Link the contact area to corresponding adress, phone, and email,
 
 
+
+  THE LOGO ON THE HEADER DOESNT CLOSE THE MENU WHEN CLICKED, 
+  but it changes the navigation.
+
+  Cambiar los objectos en el nav menu, mover los iconos a la derecha, 
+  Join our weight loss program hay que mover el fondo
+
+  Our 6-week program que sean solo dos lineas
+
+  Cambiar el Irma para negrita 
+  Get in touch mas grande 
+
+
 */
   const [HandleMenuSection, setHandleMenuSection] = useState("a");
 

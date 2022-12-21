@@ -201,8 +201,8 @@ function HomeScreen() {
             “Leaner & Stronger”
           </h2>
           <p className="hr-txt">
-            Every great journey needs a great companion. Take the first step to
-            get started.
+            Find the most valuable nutrition tips based on sound science to help
+            you lose weight and transform your body.
           </p>
           <button className="bttn bttn-sdy">
             <FaAmazon className="icon" />
@@ -223,8 +223,8 @@ function HomeScreen() {
             Loss program
           </h2>
           <p className="txt">
-            Find the most valuable nutrition tips based on sound science to help
-            you lose weight and transform your body.
+            Every great journey needs a great companion. Take the first step to
+            get started.
           </p>
           <button className="bttn bttn-pmr">
             {/* <FaLongArrowAltRight className="icon" /> */}

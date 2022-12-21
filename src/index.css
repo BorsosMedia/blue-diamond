@@ -1002,7 +1002,10 @@ a {
 .prd-dsc .bttn-try {
   color: var(--pmr-clr);
 }
-
+.prd-dsc .bttn-try:hover {
+  background-color: var(--pmr-clr);
+  color: #ffff;
+}
 .pgrm-srv {
   padding: 2rem 1rem;
   display: flex;

@@ -939,6 +939,10 @@ a {
   font-size: 1.2rem;
   color: black;
   font-family: NexaBold;
+  text-align: center;
+}
+.prd-dsc p {
+  text-align: center;
 }
 /* .prd-itm-ctnr h4::before {
   content: "•";
@@ -1137,6 +1141,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: var(--bx-shw);
 }
 .skn-prd-txt .txt {
   color: #ffff;
@@ -1448,6 +1453,7 @@ html.has-scroll-dragging {
   .abt-m-ctnr .main-ttl {
     color: var(--pmr-clr);
     position: relative;
+    text-align: left;
   }
   .abt-m-ctnr .txt {
     position: relative;
@@ -1780,6 +1786,13 @@ html.has-scroll-dragging {
   .scnd-ctnr .hr-txt,
   .frth-ctnr .hr-txt {
     text-align: right;
+    width: 60%;
+  }
+  .thrd-ctnr .txt {
+    width: 60%;
+  }
+  .srv-ctnr .txt {
+    width: 70%;
   }
 
   .frth-ctnr {

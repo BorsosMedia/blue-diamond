@@ -50,9 +50,13 @@ function ProductsScreen() {
               to adapt your diet and the most valuable information you need
               before starting a weight loss program.
             </p>
-            <button className="bttn bttn-try">
-              Buy Here {/* <FaLongArrowAltRight className="icon" /> */}
-            </button>
+            <a
+              href="https://www.amazon.com/-/es/PhD-Liset-Maldonado/dp/B09WHQCQ8N/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr="
+              target="_blank"
+              className="bttn bttn-try"
+            >
+              Buy Here
+            </a>
           </div>
         </div>
         <div className="itm-ctnr">
@@ -65,9 +69,13 @@ function ProductsScreen() {
               It’s the simplest way to track your eating and exercising habits
               that will help you maintain focus on reaching your fitness goals.
             </p>
-            <button className="bttn bttn-try">
+            <a
+              href="https://www.amazon.com/Liset-Maldonado-Alvarez/dp/B09MYVVBFP?ref_=ast_sto_dp"
+              target="_blank"
+              className="bttn bttn-try"
+            >
               Buy Here {/* <FaLongArrowAltRight className="icon" /> */}
-            </button>
+            </a>
           </div>
         </div>
         <div className="itm-ctnr">
@@ -81,9 +89,13 @@ function ProductsScreen() {
               thinking long-term to help you organize your food, add variety,
               and help you eat the right portions at the right time.
             </p>
-            <button className="bttn bttn-try">
+            <a
+              href="https://www.amazon.com/Liset-Maldonado-Alvarez/dp/B09MYRBB91?ref_=ast_sto_dp"
+              target="_blank"
+              className="bttn bttn-try"
+            >
               Buy here {/* <FaLongArrowAltRight className="icon" /> */}
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -111,7 +123,13 @@ function ProductsScreen() {
               <br />
               *Doctor Recommended*
             </p>
-            <button className="bttn bttn-try">Buy Here</button>
+            <a
+              href="https://resveratone.com/transcript?aff_id=42&subid2=7001_sessid20221221210015125&subid=10138"
+              target="_blank"
+              className="bttn bttn-try"
+            >
+              Buy Here
+            </a>
           </div>
         </div>
         <div className="skn-ctnr">
@@ -131,7 +149,13 @@ function ProductsScreen() {
               giving up the foods you love. It will supercharge your energy, and
               make you feel and look better.
             </p>
-            <button className="bttn bttn-try">Buy Here</button>
+            <a
+              href="https://www.gobiofit.net/bf/?utm_source=clickbank&utm_medium=affiliate&utm_term=affiliate-traffic&utm_content=affid-hop-&utm_campaign=front-end-long&hop=mweb1&subid=7682"
+              target="_blank"
+              className="bttn bttn-try"
+            >
+              Buy Here
+            </a>
           </div>
         </div>
       </section>

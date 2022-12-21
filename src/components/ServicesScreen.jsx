@@ -21,9 +21,6 @@ function ServicesScreen() {
             chemistry works, organizing our meal schedules, and regulating our
             meal portions.
           </p>
-          <button className="bttn bttn-try">
-            Join the program {/* <FaLongArrowAltRight className="icon" /> */}
-          </button>
         </div>
       </section>
       <section className="ctnr srv-ctnr">

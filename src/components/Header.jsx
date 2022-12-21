@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useScrollLock } from "../hooks/useScrollLock";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logoImg from "../assets/BlueDiamond_Logo.png";
@@ -18,7 +18,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const anmRef = useRef(null);
 
@@ -32,9 +31,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
 
     anmRef.current.to(".nv-wrppr", {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-
       duration: 0.6,
-
       stagger: 0.3,
       top: "0",
     });
@@ -64,11 +61,9 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
     }
   }, [handleMobileMenu]);
 
-  /*  useEffect(() => { */
   function handleNavRoute(nav) {
     switch (nav) {
       case "/":
-        localStorage.setItem("HandleSection", "1");
         navigate("/");
         setHandleMenuSection("a");
         setHandleMobileMenu(false);
@@ -76,7 +71,6 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
 
         break;
       case "/products":
-        localStorage.setItem("HandleSection", "2");
         navigate("/products");
         setHandleMenuSection("b");
 
@@ -85,7 +79,6 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
 
         break;
       case "/services":
-        localStorage.setItem("HandleSection", "3");
         navigate("/services");
         setHandleMenuSection("c");
 
@@ -95,7 +88,6 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
         break;
 
       case "/about":
-        localStorage.setItem("HandleSection", "4");
         navigate("/about");
         setHandleMenuSection("d");
 
@@ -115,7 +107,6 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
         break;
     }
   }
-  /* }, [location.pathname]); */
 
   return (
     <div className="hdr-ctnr">
@@ -181,7 +172,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
             <span
               className={HandleMenuSection === "d" ? "nv-itm-act" : undefined}
             >
-              About us
+              About Us
             </span>
           </li>
           <li className="nv-itm" onClick={() => handleNavRoute("/contact")}>

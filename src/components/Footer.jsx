@@ -141,7 +141,7 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
           }
           onClick={() => handleFooterNav("/about")}
         >
-          About me
+          About Us
         </li>
         {/*     <li className="ftr-lst-itm" onClick={() => handleFooterNav("/blog")}>
           Blog
@@ -158,7 +158,7 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
         </li>
       </ul>
       <div className="scl-md">
-        <h4 className="ftr-hdr">Connect with us</h4>
+        <h4 className="ftr-hdr">Connect With Us</h4>
         <div className="sm-ctnr">
           <a
             className="ftr-lg-ctnr"

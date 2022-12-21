@@ -13,7 +13,7 @@ function AboutScreen() {
       <section className="ctnr abt-m-ctnr">
         <div className="abt-bg"></div>
         <div>
-          <h2 className="main-ttl">About Our Founder</h2>
+          <h2 className="main-ttl">Meet Our Founder</h2>
           <p className="txt">
             With a strong background in science, specifically Chemistry,{" "}
             <strong style={{ color: "black", fontFamily: "NexaBold" }}>

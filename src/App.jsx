@@ -23,6 +23,29 @@ function App() {
   blue diamond about us changes, colorful thing on the services area mobile version change,
   products hero img gradient
 
+  cambiar el color del texto en el about us (blue diamond studio),
+  cambiar el texo de nexa light a nexa regular de products,
+  hacer que la linea se rompa en 3 lineas para que no llegue tanto al medio,
+  sombra a la caja de productos y ponerle el degradado al fondo,
+  cambiar los botones a color azul, 
+
+
+  Services, 
+  how to get the body of your dreams, quitar el botton s
+  cambiar las lineas que en vez de dos sean 3  s 
+
+
+  about our founder, meet our founder  s
+
+
+  about color text from yellow to blue, s
+  change the button color hover to white s
+  y de color azul
+
+
+  Link the contact area to corresponding adress, phone, and email,
+
+
 */
   const [HandleMenuSection, setHandleMenuSection] = useState("a");
 

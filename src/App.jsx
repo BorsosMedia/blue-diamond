@@ -56,7 +56,9 @@ function App() {
   Our 6-week program que sean solo dos lineas
 
   Cambiar el Irma para negrita 
-  Get in touch mas grande 
+  Get in touch mas grande   
+
+  Make a way to solve the height overflow part on the Resveratone and BioFit area 
 
 
 */

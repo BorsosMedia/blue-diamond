@@ -175,6 +175,9 @@ a {
   min-height: auto;
   justify-items: stretch;
   gap: 1rem;
+  background: linear-gradient(180deg, #e5f0ff 0%, #e5f0ff 50.22%, #4286e8 100%),
+    url(./assets/ss_background.jpg), #e5f0ff;
+  background-blend-mode: overlay, normal, normal;
 }
 .fth-ctnr .bttn {
   color: var(--pmr-clr);
@@ -792,8 +795,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: url(./assets/wgh-lss-bg.jpg);
-  background-position: 86% 100%;
+  background: url(./assets/wgh-lss-sm.jpg);
+  background-position: 98% 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1023,7 +1026,7 @@ a {
   background: url(./assets/prm-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left;
+  background-position: 38% 100%;
   padding: 2rem 1rem;
   display: flex;
   justify-content: flex-end;
@@ -1417,7 +1420,9 @@ html.has-scroll-dragging {
 /*  */
 @media screen and (orientation: landscape) {
   .flex-col-ctnr,
-  .img-bk {
+  .img-bk,
+  .bk-txt,
+  .bk-hr {
     transform: translateY(0) !important;
   }
 }
@@ -1628,6 +1633,9 @@ html.has-scroll-dragging {
   }
   .srv-ctnr {
     align-items: flex-start;
+    background: url(./assets/wgh-lss-bg.jpg);
+    background-position: 50% 100%;
+    background-size: cover;
   }
   .srv-ctnr .main-ttl {
     text-align: left;
@@ -1842,7 +1850,7 @@ html.has-scroll-dragging {
   .ftr-ctnr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(2, min-content);
     gap: 1rem;
     justify-items: center;
   }
@@ -1879,8 +1887,23 @@ html.has-scroll-dragging {
   .ftr-txt {
     border-top: none;
   }
+
   .txt-ftr-ctnr {
     grid-column: 1 / 4;
+    grid-row: 3/3;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  .txt-ftr-ctnr::before {
+    content: "";
+    height: 1px;
+    width: min(45%, 35%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--pmr-clr);
   }
   .abt-m-ctnr {
     display: grid;

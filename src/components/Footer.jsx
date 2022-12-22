@@ -158,6 +158,14 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
         </li>
       </ul>
       <div className="scl-md">
+        <img src={logoImg} alt="" className="ftr-lg-img" />
+
+        <p>
+          Blue Diamond Studio
+          <br /> 556 Upper Wentworth St. <br />
+          Hamilton, ON L9A 4T9, Canada.
+        </p>
+
         <h4 className="ftr-hdr">Connect With Us</h4>
         <div className="sm-ctnr">
           <a

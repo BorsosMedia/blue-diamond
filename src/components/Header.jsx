@@ -110,7 +110,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
 
   return (
     <div className="hdr-ctnr">
-      <div className="lgo-ctnr" onClick={() => navigate("/")}>
+      <div className="lgo-ctnr" onClick={() => handleNavRoute("/")}>
         <img src={logoImg} alt="" className="logoImg" />
       </div>
 

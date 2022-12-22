@@ -4,6 +4,7 @@ import gridImg from "../assets/3-bottles.png";
 import gridImg2 from "../assets/BookA.png";
 import gridImg3 from "../assets/BookC.png";
 import gridImg4 from "../assets/Biofit3.png";
+import gridImg5 from "../assets/BookB.png";
 import bookImg from "../assets/Book2.png";
 import svgH from "../assets/hero-section-helper.svg";
 
@@ -244,6 +245,9 @@ function HomeScreen() {
           </div>
           <div id="Bitm">
             <img src={gridImg2} alt="" className="grid-img" />
+          </div>
+          <div id="Bitm">
+            <img src={gridImg5} alt="" className="grid-img" />
           </div>
           <div id="Citm">
             <img src={gridImg3} alt="" className="grid-img" />

@@ -6,6 +6,7 @@ import gridImg3 from "../assets/BookC.png";
 import gridImg4 from "../assets/Biofit3.png";
 import gridImg5 from "../assets/BookB.png";
 import bookImg from "../assets/Book2.png";
+import { useNavigate } from "react-router-dom";
 import svgH from "../assets/hero-section-helper.svg";
 
 import { gsap } from "gsap";
@@ -19,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function HomeScreen() {
   /*   const { cursorChangeHandler } = useContext(MouseContext); */
-
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
@@ -140,49 +141,53 @@ function HomeScreen() {
       }
     ); */
   }, []);
+  function HandleWeightProgram() {
+    navigate("/services");
+    setTimeout(() => {
+      document.querySelector("#srv-id").scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 10);
+  }
+  function HandleProductItm() {
+    navigate("/products");
+    setTimeout(() => {
+      document.querySelector(".prd-itm-ctnr").scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 10);
+  }
+  function HandleSuccessB() {
+    navigate("/about");
+    setTimeout(() => {
+      document.querySelector(".scss-scrn").scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 10);
+  }
 
   return (
     <>
       <section className="ctnr fst-ctnr">
-        {/*   <p className="prgph prgphA">
-            "A perfect book to lose weight and exercise without the pressure of
-            too many demands."
-            <br />
-            <br />
-            -Helen de la Paz
-          </p> */}
-        {/*  <p className="prgph prgphB">
-          "Magnificent for people like me who are not so responsible but who
-          love the fitness body. Thank you for this wonderful proposal of
-          healthy life."
-          <br />
-          <br />
-          -Helen de la Paz
-        </p> */}
         <div className="flex-col-ctnr">
-          {/*   <p className="dsc-txt">"Magnificent"</p> */}
           <h1 className="main-ttl anm" id="ttl-a">
             Change your body
           </h1>
           <h1 className="main-ttl anm" id="ttl-a" style={{ color: "#ffd731" }}>
             Change your mind
           </h1>
-          {/*   <div className="hr-img-ctnr">
-              <img src={heroBook} alt="" className="hr--img" />
-            </div> */}
 
           <p className="hr-txt hr-txt-anm">
             A REAL change starts with a lifestyle transformation.
             <br />
             We can help you start that change TODAY!
           </p>
-          <a
-            href="https://www.google.com"
-            target="_blank"
+          <button
+            onClick={() => navigate("/services")}
             className="bttn bttn-lnk"
           >
             Start today {/* <FaLongArrowAltRight className="icon" /> */}
-          </a>
+          </button>
         </div>
         <div className="column2">
           <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
@@ -205,14 +210,14 @@ function HomeScreen() {
             Find the most valuable nutrition tips based on sound science to help
             you lose weight and transform your body.
           </p>
-          <button className="bttn bttn-sdy">
+          <a
+            href="https://www.amazon.com/-/es/PhD-Liset-Maldonado/dp/B09WHQCQ8N/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr="
+            target="_blank"
+            className="bttn bttn-sdy"
+          >
             <FaAmazon className="icon" />
-            Amazon
-          </button>
-          <button className="bttn bttn-pmr">
-            <FaShoppingCart className="icon" />
             Get yours here
-          </button>
+          </a>
         </div>
       </section>
 
@@ -227,7 +232,8 @@ function HomeScreen() {
             Every great journey needs a great companion. Take the first step to
             get started.
           </p>
-          <button className="bttn bttn-pmr">
+          <button className="bttn bttn-pmr" onClick={HandleWeightProgram}>
+            {/* Redigirira a la pagina de servicios  */}
             {/* <FaLongArrowAltRight className="icon" /> */}
             Join the program
           </button>
@@ -256,8 +262,8 @@ function HomeScreen() {
             <img src={gridImg4} alt="" className="grid-img" />
           </div>
         </div>
-        <button className="bttn bttn-try">
-          Go to the store {/* <FaLongArrowAltRight className="icon" /> */}
+        <button onClick={HandleProductItm} className="bttn bttn-try">
+          Go to Products{/* <FaLongArrowAltRight className="icon" /> */}
         </button>
       </section>
       <section className="ctnr frth-ctnr">
@@ -268,9 +274,9 @@ function HomeScreen() {
             Read more about our clients and how we’ve helped them achieve their
             dream bodies.
           </p>
-          <a className="bttn bttn-pmr">
+          <button onClick={HandleSuccessB} className="bttn bttn-pmr">
             Join the Program{/*  <FaLongArrowAltRight className="icon" /> */}
-          </a>
+          </button>
         </div>
       </section>
     </>

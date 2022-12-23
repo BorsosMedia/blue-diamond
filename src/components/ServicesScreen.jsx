@@ -4,10 +4,15 @@ import poly2 from "../assets/poly2.png";
 import poly3 from "../assets/poly3.png";
 import poly4 from "../assets/poly4.png";
 function ServicesScreen() {
-  useEffect(() => {
+  /*   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
+  }, []); */
+  function HandleServiceButton() {
+    /*   document.getElementById("srv-id").scrollIntoView(); */
+    document.querySelector("#srv-id").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
   return (
     <>
       <section className="ctnr prm-ctnr">
@@ -31,12 +36,12 @@ function ServicesScreen() {
             portions at the right time, stay motivated to eat the right food,
             and incorporate healthier habits in only 6 weeks.
           </p>
-          <button className="bttn bttn-try">
+          <button className="bttn bttn-try" onClick={HandleServiceButton}>
             Join the program {/* <FaLongArrowAltRight className="icon" /> */}
           </button>
         </div>
       </section>
-      <section className="ctnr pgrm-srv">
+      <section className="ctnr pgrm-srv" id="srv-id">
         <div className="mdl-txt bx-shdw">
           <h4 className="main-ttl">
             Change your life in only <br />

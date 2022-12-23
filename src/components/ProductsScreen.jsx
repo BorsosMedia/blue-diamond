@@ -6,9 +6,9 @@ import BioFit from "../assets/Biofit3.png";
 import Resvatone from "../assets/3-bottles.png";
 
 function ProductsScreen() {
-  useEffect(() => {
+  /*   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  }, []); */
 
   return (
     <>
@@ -78,7 +78,7 @@ function ProductsScreen() {
             </a>
           </div>
         </div>
-        <div className="itm-ctnr">
+        <div className="itm-ctnr" id="prd-itm">
           <div className="prd-img-ctnr">
             <img src={BookC} alt="" />
           </div>

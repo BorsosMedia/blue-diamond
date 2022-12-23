@@ -2,12 +2,21 @@ import React from "react";
 import Nelvis from "../assets/Nelvis-str.png";
 import Irma from "../assets/Irma-str.png";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AboutScreen() {
-  useEffect(() => {
+  const navigate = useNavigate();
+  /*   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
+  }, []); */
+  function HandleProgramB() {
+    navigate("/services");
+    setTimeout(() => {
+      document.querySelector("#srv-id").scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 10);
+  }
   return (
     <>
       <section className="ctnr abt-m-ctnr">
@@ -55,7 +64,9 @@ function AboutScreen() {
         {/* <div className="abt-m-lg-ctnr">
           <img src={bluediamondLogo} alt="" />
         </div> */}
-        <button className="bttn bttn-try">Contact us</button>
+        <button onClick={() => navigate("/contact")} className="bttn bttn-try">
+          Contact us
+        </button>
       </section>
       <section className="ctnr scss-scrn">
         <h2 className="main-ttl">Success Stories</h2>
@@ -89,7 +100,9 @@ function AboutScreen() {
             <br />
           </p>
         </div>
-        <button className="bttn bttn-pmr">Join the program</button>
+        <button className="bttn bttn-pmr" onClick={HandleProgramB}>
+          Join the program
+        </button>
       </section>
     </>
   );

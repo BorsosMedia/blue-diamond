@@ -389,6 +389,7 @@ a {
   text-align: right;
   transition: 400ms;
   color: #ffff;
+  font-size: 1.3rem;
 }
 .nv-itm .icon {
   color: #ffff;
@@ -1995,6 +1996,9 @@ html.has-scroll-dragging {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .scnd-ctnr .bttn-sdy {
+    grid-column: 3/5;
+  }
 
   .scnd-ctnr .main-ttl {
     padding: 0;
@@ -2049,6 +2053,7 @@ html.has-scroll-dragging {
   .nv-itm span {
     text-align: center;
     min-width: 4rem;
+    font-size: 1.1rem;
   }
   .nv-wrppr {
     padding: initial;

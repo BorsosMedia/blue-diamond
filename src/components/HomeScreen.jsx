@@ -237,7 +237,7 @@ function HomeScreen() {
         <h1 className="main-ttl">Find The Best Products Here!</h1>
         <p className="txt">
           If you need help to lose weight, increase your performance or take
-          better care of yourself, we got something for you!
+          better care of yourself, we have something for you!
         </p>
         <div className="imgs-ctnr">
           <div id="Aitm">

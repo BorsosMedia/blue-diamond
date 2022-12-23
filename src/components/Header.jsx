@@ -20,6 +20,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
 
   const anmRef = useRef(null);
+  const anmOvl = useRef(null);
 
   const [handleMobileMenu, setHandleMobileMenu] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
@@ -28,35 +29,39 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
     anmRef.current = gsap.timeline({
       defaults: { ease: Expo.easeInOut },
     });
+    anmOvl.current = gsap.timeline({
+      defaults: { ease: Expo.easeInOut },
+    });
 
+    anmOvl.current.to(".nv-ovrly", {
+      duration: 0.8,
+      backdropFilter: "blur(2rem)",
+      webkitBackdropFilter: "blur(2rem)",
+      visibility: "visible",
+    });
     anmRef.current.to(".nv-wrppr", {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       duration: 0.6,
       stagger: 0.3,
-      top: "0",
+      right: "0",
     });
-    /* .fromTo(
-        ".nv-itm",
-        {
-          y: 20,
-          opacity: 0,
-        },
-        { stagger: 0.04, y: 20, opacity: 1 }
-      ); */
 
     return () => {
       anmRef.current.kill();
+      anmOvl.current.kill();
     };
   }, []);
 
   useEffect(() => {
     if (handleMobileMenu) {
       anmRef.current.play();
+      anmOvl.current.play();
       setTimeout(() => {
         lockScroll();
       }, 200);
     } else {
       anmRef.current.reverse();
+      anmOvl.current.reverse();
       unlockScroll();
     }
   }, [handleMobileMenu]);
@@ -107,9 +112,37 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
         break;
     }
   }
+  function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState(null);
 
+    useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (
+          direction !== scrollDirection &&
+          (scrollY - lastScrollY > 5 || scrollY - lastScrollY < -5)
+        ) {
+          setScrollDirection(direction);
+        }
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection);
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection);
+      };
+    }, [scrollDirection]);
+
+    return scrollDirection;
+  }
+
+  const scrollDirection = useScrollDirection();
   return (
-    <div className="hdr-ctnr">
+    <div
+      className={scrollDirection === "down" ? "hdr-ctnr hdr-hddn" : "hdr-ctnr"}
+    >
       <div className="lgo-ctnr" onClick={() => handleNavRoute("/")}>
         <img src={logoImg} alt="" className="logoImg" />
       </div>
@@ -120,6 +153,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
       >
         <HiOutlineMenuAlt3 className="icon" />
       </div>
+      <div className="nv-ovrly"> </div>
       <nav className="nv-wrppr">
         <ul className="nv-ctnr">
           <li className="nv-itm" onClick={() => handleNavRoute("/")}>

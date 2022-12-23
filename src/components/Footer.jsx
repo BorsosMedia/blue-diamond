@@ -7,27 +7,22 @@ import { RxInstagramLogo } from "react-icons/rx";
 
 function Footer({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
-
+  const location = useLocation();
   function handleFooterNav(nav) {
     switch (nav) {
       case "/":
-        setHandleMenuSection("a");
         navigate("/");
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/products":
-        setHandleMenuSection("b");
-
         navigate("/products");
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/services":
-        setHandleMenuSection("c");
-
         navigate("/services");
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -40,8 +35,6 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
   
           break; */
       case "/about":
-        setHandleMenuSection("d");
-
         navigate("/about");
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -49,8 +42,6 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
         break;
 
       case "/contact":
-        setHandleMenuSection("e");
-
         navigate("/contact");
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -58,6 +49,33 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
         break;
     }
   }
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        setHandleMenuSection("a");
+
+        break;
+      case "/products":
+        setHandleMenuSection("b");
+
+        break;
+      case "/services":
+        setHandleMenuSection("c");
+
+        break;
+
+      case "/about":
+        setHandleMenuSection("d");
+
+        break;
+
+      case "/contact":
+        setHandleMenuSection("e");
+
+        break;
+    }
+  }, [location.pathname]);
   /* 
   useEffect(() => {
     switch (location.pathname) {

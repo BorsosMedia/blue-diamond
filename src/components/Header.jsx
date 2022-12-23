@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useScrollLock } from "../hooks/useScrollLock";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logoImg from "../assets/BlueDiamond_Logo.png";
@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header({ HandleMenuSection, setHandleMenuSection }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const anmRef = useRef(null);
   const anmOvl = useRef(null);
@@ -52,6 +53,48 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
     };
   }, []);
 
+  function handleNavRoute(nav) {
+    switch (nav) {
+      case "/":
+        navigate("/");
+
+        setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+        break;
+      case "/products":
+        navigate("/products");
+
+        setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+        break;
+      case "/services":
+        navigate("/services");
+        setHandleMobileMenu(false);
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+        break;
+
+      case "/about":
+        navigate("/about");
+
+        setHandleMobileMenu(false);
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+        break;
+
+      case "/contact":
+        navigate("/contact");
+
+        setHandleMobileMenu(false);
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+        break;
+    }
+  }
   useEffect(() => {
     if (handleMobileMenu) {
       anmRef.current.play();
@@ -66,52 +109,33 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
     }
   }, [handleMobileMenu]);
 
-  function handleNavRoute(nav) {
-    switch (nav) {
+  useEffect(() => {
+    switch (location.pathname) {
       case "/":
-        navigate("/");
         setHandleMenuSection("a");
-        setHandleMobileMenu(false);
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/products":
-        navigate("/products");
         setHandleMenuSection("b");
-
-        setHandleMobileMenu(false);
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
       case "/services":
-        navigate("/services");
         setHandleMenuSection("c");
-
-        setHandleMobileMenu(false);
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
 
       case "/about":
-        navigate("/about");
         setHandleMenuSection("d");
-
-        setHandleMobileMenu(false);
-
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
 
       case "/contact":
-        navigate("/contact");
-
-        setHandleMobileMenu(false);
         setHandleMenuSection("e");
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
         break;
     }
-  }
+  }, [location.pathname]);
+
   function useScrollDirection() {
     const [scrollDirection, setScrollDirection] = useState(null);
 

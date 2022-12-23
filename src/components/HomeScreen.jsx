@@ -12,7 +12,7 @@ import svgH from "../assets/hero-section-helper.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { FaAmazon, FaShoppingCart } from "react-icons/fa";
+import { FaAmazon } from "react-icons/fa";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
@@ -147,7 +147,7 @@ function HomeScreen() {
       document.querySelector("#srv-id").scrollIntoView({
         behavior: "smooth",
       });
-    }, 10);
+    }, 50);
   }
   function HandleProductItm() {
     navigate("/products");
@@ -155,7 +155,7 @@ function HomeScreen() {
       document.querySelector(".prd-itm-ctnr").scrollIntoView({
         behavior: "smooth",
       });
-    }, 10);
+    }, 50);
   }
   function HandleSuccessB() {
     navigate("/about");
@@ -163,7 +163,7 @@ function HomeScreen() {
       document.querySelector(".scss-scrn").scrollIntoView({
         behavior: "smooth",
       });
-    }, 10);
+    }, 50);
   }
 
   return (

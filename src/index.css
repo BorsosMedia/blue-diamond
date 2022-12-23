@@ -812,7 +812,7 @@ a {
   background-position: 98% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
 .srv-ctnr .main-ttl {
@@ -943,6 +943,7 @@ a {
   grid-column: 2/2;
   display: block;
   width: 100%;
+  font-size: 0.9rem;
 }
 /* .scl-md p:nth-of-type(1) {
   grid-row: 2/2;
@@ -1521,6 +1522,10 @@ html.has-scroll-dragging {
 }
 
 @media screen and (min-width: 912px) {
+  .scl-md p {
+    font-size: 1rem;
+    text-align: left;
+  }
   .abt-bg {
     height: 87%;
     display: block;
@@ -1883,6 +1888,7 @@ html.has-scroll-dragging {
     grid-template-rows: repeat(2, min-content);
     gap: 1rem;
     justify-items: center;
+    padding: 2rem 1rem;
   }
   .ftr-lg-img {
     max-width: 40%;

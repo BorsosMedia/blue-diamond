@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Nelvis from "../assets/Nelvis-str.png";
 import Irma from "../assets/Irma-str.png";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import abt from "../assets/abt-bg.svg";
 
 function AboutScreen() {
   const navigate = useNavigate();
@@ -20,23 +20,27 @@ function AboutScreen() {
   return (
     <>
       <section className="ctnr abt-m-ctnr">
-        <div className="abt-bg"></div>
-        <div>
-          <h2 className="main-ttl">Meet Our Founder</h2>
-          <p className="txt">
-            With a strong background in science, specifically Chemistry,{" "}
-            <strong style={{ color: "black", fontFamily: "NexaBold" }}>
-              Liset Maldonado Alvarez
-            </strong>{" "}
-            has been involved in the fitness industry for decades.
-            <br />
-            <br />
-            She spent years as an award-winning figure competitor, and has
-            decades of experience as a personal trainer, using her scientific
-            knowledge to deliver fitness and nutrition programs.
-          </p>
+        <div className="abt-bg">
+          <div className="fst-wrp">
+            <h2 className="main-ttl">Meet Our Founder</h2>
+            <p className="txt">
+              With a strong background in science, specifically Chemistry,{" "}
+              <strong style={{ color: "black", fontFamily: "NexaBold" }}>
+                Liset Maldonado Alvarez
+              </strong>{" "}
+              has been involved in the fitness industry for decades.
+              <br />
+              <br />
+              She spent years as an award-winning figure competitor, and has
+              decades of experience as a personal trainer, using her scientific
+              knowledge to deliver fitness and nutrition programs.
+            </p>
+          </div>
+
+          <div className="abt-m-img">
+            <img src="" alt="" />
+          </div>
         </div>
-        <div className="abt-m-img"></div>
       </section>
       <section className="ctnr abt-m-sc2">
         <h2 className="main-ttl">Blue Diamond Studio</h2>

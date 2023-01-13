@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import PlanSection from "./PlanSection";
+import { useEffect } from "react";
 
 import gridImg from "../assets/3-bottles.png";
-import gridImg2 from "../assets/BookA-min.webp";
-import gridImg3 from "../assets/BookC-min.webp";
-import gridImg4 from "../assets/Biofit3-min.webp";
-import gridImg5 from "../assets/BookB-min.webp";
-import bookImg from "../assets/Book2-min.webp";
+import gridImg2 from "../assets/BookA.png";
+import gridImg3 from "../assets/BookC.png";
+import gridImg4 from "../assets/Biofit3.png";
+import gridImg5 from "../assets/BookB.png";
+import bookImg from "../assets/Book2.png";
 import { useNavigate } from "react-router-dom";
 import svgH from "../assets/hero-section-helper.svg";
 
@@ -14,22 +13,134 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { FaAmazon } from "react-icons/fa";
-import { BiChevronDown } from "react-icons/bi";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
 gsap.registerPlugin(ScrollTrigger);
 
 function HomeScreen() {
+  /*   const { cursorChangeHandler } = useContext(MouseContext); */
   const navigate = useNavigate();
-  const [PlanToggler, setPlanToggler] = useState("1");
-  const [UpdatePlans, setUpdatePlans] = useState(true);
-  const [PlanDropdown, setPlanDropdown] = useState(false);
-
   useEffect(() => {
-    setPlanDropdown(false);
-  }, [PlanToggler]);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
+    /*   const tl = gsap.timeline({ defaults: { ease: Expo.easeInOut } });
+    tl.to(".anm", {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      y: 0,
+      duration: 1,
+      stagger: 0.3,
+      delay: 0.5,
+    })
+      .to(".hr-txt-anm", {
+        y: 0,
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      })
+      .to(
+        ".bttn-lnk",
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          duration: 1,
+        },
+        "1.5"
+      ) */
+    /*  .to(".prgph", { opacity: 0, duration: 1, delay: 2 }) */
+    /*   .to(".bttn-lnk", {
+        /*      x: "1000", */
+    /*     xPercent: 100,
+        duration: 5,
+
+        scrollTrigger: {
+          trigger: ".anm",
+          scroller: "#app-ctnr",
+          start: "center top",
+
+          scrub: 4,
+        },
+      })
+
+      .to("#scss-img", {
+        y: 20,
+        scrollTrigger: {
+          trigger: "#scss-img",
+          scroller: "#app-ctnr",
+          start: "top center",
+          scrub: 3,
+        },
+      }); */
+    /* gsap.to(".column2", {
+      y: 500,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".column2",
+        scroller: "#app-ctnr",
+        start: "center 40%",
+        scrub: 4,
+      },
+    }); */
+    /* gsap.to("#Aitm", {
+      y: 38,
+      scrollTrigger: {
+        trigger: ".imgs-ctnr",
+        scroller: "#app-ctnr",
+        start: "top center",
+        scrub: 1,
+      },
+    });
+    gsap.to("#Bitm", {
+      y: 35,
+      scrollTrigger: {
+        trigger: ".imgs-ctnr",
+        scroller: "#app-ctnr",
+        start: "top center",
+        scrub: 5,
+      },
+    });
+    gsap.to("#Citm", {
+      y: 38,
+      scrollTrigger: {
+        trigger: ".imgs-ctnr",
+        scroller: "#app-ctnr",
+        start: "top center",
+        scrub: 2,
+      },
+    });
+    gsap.to("#ttl", {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      y: 0,
+      scrollTrigger: {
+        trigger: "#ttl",
+        scroller: "#app-ctnr",
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+    gsap.to("#ttlB", {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      y: 0,
+      scrollTrigger: {
+        trigger: "#ttlB",
+        scroller: "#app-ctnr",
+        start: "top 90%",
+      },
+    }); */
+    /* 
+    gsap.fromTo(
+      ".imgs-ctnr",
+      { xPercent: 100 },
+      {
+        xPercent: 0,
+
+        scrollTrigger: {
+          trigger: ".scnd-ctnr--wrppr",
+          scroller: "#app-ctnr",
+          start: "top bottom",
+          end: "bottom 60%",
+          scrub: 3,
+        },
+      }
+    ); */
+  }, []);
   function HandleWeightProgram() {
     navigate("/services");
     setTimeout(() => {
@@ -82,72 +193,10 @@ function HomeScreen() {
           <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
         </div>
       </section>
-      <section className="ctnr membership-ctnr">
+      <section className="ctnr scnd-ctnr">
         <div className="hr-hl">
           <img src={svgH} alt="" />
         </div>
-        <h2 className="ttl">Membership Plans</h2>
-
-        <div className="toggle-ctnr">
-          <button
-            className="toggle-drop"
-            onClick={() => setPlanDropdown(!PlanDropdown)}
-          >
-            Choose your type of plan{" "}
-            <BiChevronDown
-              className={PlanDropdown ? "icon dropdown-icon-act" : "icon"}
-            />
-          </button>
-          <div
-            className={
-              PlanDropdown ? "dropdown-ctnr dropdown-ctnr-act" : "dropdown-ctnr"
-            }
-          >
-            <button
-              className={
-                PlanToggler == "1"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("1")}
-            >
-              Monthly
-            </button>
-            <button
-              className={
-                PlanToggler == "2"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("2")}
-            >
-              3 Months
-            </button>
-            <button
-              className={
-                PlanToggler == "3"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("3")}
-            >
-              6 Months
-            </button>
-            <button
-              className={
-                PlanToggler == "4"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("4")}
-            >
-              Annual
-            </button>
-          </div>
-        </div>
-        <PlanSection PlanToggler={PlanToggler} PlanDropdown={PlanDropdown} />
-      </section>
-      <section className="ctnr scnd-ctnr">
         <div className="bk-hr">
           <img src={bookImg} className="img-bk" alt="" />
         </div>

@@ -37,7 +37,7 @@ function Header({ HandleMenuSection, setHandleMenuSection }) {
     anmOvl.current.to(".nv-ovrly", {
       duration: 0.8,
       backdropFilter: "blur(2rem)",
-
+      webkitBackdropFilter: "blur(2rem)",
       visibility: "visible",
     });
     anmRef.current.to(".nv-wrppr", {

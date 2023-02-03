@@ -1,9 +1,14 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { HiShoppingCart } from "react-icons/hi";
 import { AiFillStar } from "react-icons/ai";
 
 function PlanSection({ PlanToggler, PlanDropdown }) {
-  console.log(PlanToggler);
+  /*  const [DiamondAnimation, setDiamondAnimation] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setDiamondAnimation(true);
+    }, 1000);
+  }, [PlanToggler]); */
   return (
     <div className="plans-ctnr">
       {PlanToggler === "1" && (
@@ -16,7 +21,7 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
               Gold
             </li>
             <li className="mbr-dsc">
-              Custom programming in the most afforable way possible
+              Custom programming in the most affordable way possible
             </li>
             <li className="crd-prc">
               $100 <span className="abbr-">/month</span>
@@ -24,7 +29,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Bi-weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly </li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/gold-monthly"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -46,7 +54,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/platinum-monthly"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -68,8 +79,11 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             </li>
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Unlimited programming tweaks</li>
-            <li className="lst-dsc">Posing lessons and prep tips</li>
-            <a className="bttn">
+
+            <a
+              href="https://bluediamondhealthyliving.com/diamond-monthly"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -86,7 +100,7 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
               Gold
             </li>
             <li className="mbr-dsc">
-              Custom programming in the most afforable way possible
+              Custom programming in the most affordable way possible
             </li>
             <li className="crd-prc">
               $300 <span className="abbr-">/3 months</span>
@@ -94,7 +108,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet </li>
             <li className="lst-dsc">Bi-weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/gold-3months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -116,7 +133,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/platinum-3months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -138,8 +158,11 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             </li>
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Unlimited programming tweaks</li>
-            <li className="lst-dsc">Posing lessons and prep tips</li>
-            <a className="bttn">
+
+            <a
+              href="https://bluediamondhealthyliving.com/diamond-3months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -156,7 +179,7 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
               Gold
             </li>
             <li className="mbr-dsc">
-              Custom programming in the most afforable way possible
+              Custom programming in the most affordable way possible
             </li>
             <li className="crd-prc">
               $600 <span className="abbr-">/6 months</span>
@@ -164,7 +187,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Bi-weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/gold-6months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -186,7 +212,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/platinum-6months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -200,7 +229,7 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
               </span>
               Diamond
             </li>
-            <li className="mbr-dsc">
+            <li className=" mbr-dsc">
               Custom programming with constant feedback and prep secrets
             </li>
             <li className="crd-prc">
@@ -208,8 +237,11 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             </li>
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Unlimited programming tweaks</li>
-            <li className="lst-dsc">Posing lessons and prep tips</li>
-            <a className="bttn">
+
+            <a
+              href="https://bluediamondhealthyliving.com/diamond-6months"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -226,7 +258,7 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
               Gold
             </li>
             <li className="mbr-dsc">
-              Custom programming in the most afforable way possible
+              Custom programming in the most affordable way possible
             </li>
             <li className="crd-prc">
               $1200 <span className="abbr-">/per year</span>
@@ -234,7 +266,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Bi-weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/gold-annual"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -256,7 +291,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Weekly programming tweaks</li>
             <li className="lst-dsc">E-mail and text me directly</li>
-            <a className="bttn">
+            <a
+              href="https://bluediamondhealthyliving.com/platinum-annual"
+              className="bttn"
+            >
               <HiShoppingCart className="icon" />
               Purchase
             </a>
@@ -278,21 +316,10 @@ function PlanSection({ PlanToggler, PlanDropdown }) {
             </li>
             <li className="lst-dsc">Custom workout regimen and diet</li>
             <li className="lst-dsc">Unlimited programming tweaks</li>
-            <li className="lst-dsc">Posing lessons and prep tips</li>
+
             <a
+              href="https://bluediamondhealthyliving.com/diamond-annual"
               className="bttn"
-              /* href={(() => {
-                switch (PlanToggler) {
-                  case "1":
-                    return "$100 ";
-                  case "2":
-                    return "$300 ";
-                  case "3":
-                    return "$600 ";
-                  case "4":
-                    return "$600 ";
-                }
-              })()} */
             >
               <HiShoppingCart className="icon" />
               Purchase

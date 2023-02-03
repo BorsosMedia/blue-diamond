@@ -1504,6 +1504,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .membrsh-card .bttn:hover {
   background-color: var(--sdy-clr) !important;
+
   color: var(--pmr-clr);
 }
 .crd-prc {
@@ -1558,7 +1559,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 @keyframes PlanAnm {
   from {
-    opacity: 0.2;
+    opacity: 0;
 
     transform: translateY(10px);
   }
@@ -1796,7 +1797,7 @@ html.has-scroll-dragging {
     margin: 0 0.5rem;
   }
   .dropdown-ctnr {
-    width: 83%;
+    width: 80%;
     margin: 0 auto;
     position: static;
     opacity: 1;
@@ -1828,9 +1829,9 @@ html.has-scroll-dragging {
     justify-content: space-between;
     min-height: 400px;
   }
-  /*   .membrsh-card:nth-of-type(3) {
+  .membrsh-card:nth-of-type(3) {
     height: calc(min-content + 10rem);
-  } */
+  }
   .scl-md p {
     font-size: 1rem;
     text-align: left;

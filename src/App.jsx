@@ -14,7 +14,6 @@ import ProductsScreen from "./components/ProductsScreen";
 import Contact from "./components/Contact";
 import BlogScreen from "./components/BlogScreen";
 import { useEffect } from "react";
-import NotFoundScreen from "./components/NotFoundScreen";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -78,7 +77,6 @@ function App() {
         setHandleMenuSection={setHandleMenuSection}
       />
       <Routes>
-        <Route path="*" element={<NotFoundScreen />} />
         <Route path="/" element={<HomeScreen />} />
         <Route path="/products" element={<ProductsScreen />} />
         <Route path="/services" element={<ServicesScreen />} />

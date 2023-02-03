@@ -30,7 +30,7 @@ function Contact() {
           </div>
           <div>
             <img src={adressIcon} alt="" />
-            <p className="ctc-label">Adress</p>
+            <p className="ctc-label">Address</p>
             <p className="txt">
               556 Upper Wentworth St. <br />
               Hamilton, ON L9A 4T9, Canada

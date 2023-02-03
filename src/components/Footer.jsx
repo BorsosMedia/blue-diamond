@@ -205,7 +205,7 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
       </div>
       <div className="txt-ftr-ctnr">
         <p className="ftr-txt">
-          © Copyright 2022. All Rights Reserved.
+          © Copyright 20223 All Rights Reserved.
           <br /> Website designed and developed by
           <a href="https://www.borsosmedia.com/" target="_blank">
             Borsos Media

@@ -1,30 +1,34 @@
 import { useState, useEffect } from "react";
+import PlanSection from "./PlanSection";
 
 import gridImg from "../assets/3-bottles.png";
-import gridImg2 from "../assets/BookA.png";
-import gridImg3 from "../assets/BookC.png";
-import gridImg4 from "../assets/Biofit3.png";
-import gridImg5 from "../assets/BookB.png";
-import bookImg from "../assets/Book2.png";
+import gridImg2 from "../assets/BookA-min.webp";
+import gridImg3 from "../assets/BookC-min.webp";
+import gridImg4 from "../assets/Biofit3-min.webp";
+import gridImg5 from "../assets/BookB-min.webp";
+import bookImg from "../assets/Book2-min.webp";
 import { useNavigate } from "react-router-dom";
 import svgH from "../assets/hero-section-helper.svg";
-import PlanSection from "../components/PlanSection";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BiChevronDown } from "react-icons/bi";
 
 import { FaAmazon } from "react-icons/fa";
+import { BiChevronDown } from "react-icons/bi";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
 gsap.registerPlugin(ScrollTrigger);
 
 function HomeScreen() {
-  /*   const { cursorChangeHandler } = useContext(MouseContext); */
   const navigate = useNavigate();
   const [PlanToggler, setPlanToggler] = useState("1");
   const [UpdatePlans, setUpdatePlans] = useState(true);
   const [PlanDropdown, setPlanDropdown] = useState(false);
+
+  useEffect(() => {
+    setPlanDropdown(false);
+  }, [PlanToggler]);
 
   function HandleWeightProgram() {
     navigate("/services");
@@ -78,7 +82,7 @@ function HomeScreen() {
           <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
         </div>
       </section>
-      <section className="ctnr scnd-ctnr">
+      <section className="ctnr membership-ctnr">
         <div className="hr-hl">
           <img src={svgH} alt="" />
         </div>
@@ -143,11 +147,7 @@ function HomeScreen() {
         </div>
         <PlanSection PlanToggler={PlanToggler} PlanDropdown={PlanDropdown} />
       </section>
-
       <section className="ctnr scnd-ctnr">
-        {/* <div className="hr-hl">
-          <img src={svgH} alt="" />
-        </div> */}
         <div className="bk-hr">
           <img src={bookImg} className="img-bk" alt="" />
         </div>

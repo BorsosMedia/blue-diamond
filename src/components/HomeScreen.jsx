@@ -78,7 +78,7 @@ function HomeScreen() {
           <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
         </div>
       </section>
-      <section className="ctnr membership-ctnr">
+      <section className="ctnr scnd-ctnr">
         <div className="hr-hl">
           <img src={svgH} alt="" />
         </div>

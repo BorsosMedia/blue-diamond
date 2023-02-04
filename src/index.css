@@ -1503,7 +1503,7 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--pmr-clr);
 }
 .membrsh-card .bttn:hover {
-  background-color: var(--sdy-clr);
+  background-color: var(--sdy-clr) !important;
   color: var(--pmr-clr);
 }
 .crd-prc {

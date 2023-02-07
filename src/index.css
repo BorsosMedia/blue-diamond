@@ -1714,7 +1714,7 @@ html.has-scroll-dragging {
   }
   .bk-txt,
   .bk-hr {
-    transform: translateY(5vh);
+    transform: translateY(3vh);
   }
 
   /*   .crs {

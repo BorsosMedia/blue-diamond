@@ -65,6 +65,8 @@ function App() {
 
 */
   const [HandleMenuSection, setHandleMenuSection] = useState("a");
+  const [PlanToggler, setPlanToggler] = useState("1");
+  const [PlanDropdown, setPlanDropdown] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -77,9 +79,29 @@ function App() {
         setHandleMenuSection={setHandleMenuSection}
       />
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
+        <Route
+          path="/"
+          element={
+            <HomeScreen
+              PlanToggler={PlanToggler}
+              setPlanToggler={setPlanToggler}
+              PlanDropdown={PlanDropdown}
+              setPlanDropdown={setPlanDropdown}
+            />
+          }
+        />
         <Route path="/products" element={<ProductsScreen />} />
-        <Route path="/services" element={<ServicesScreen />} />
+        <Route
+          path="/services"
+          element={
+            <ServicesScreen
+              PlanToggler={PlanToggler}
+              setPlanToggler={setPlanToggler}
+              PlanDropdown={PlanDropdown}
+              setPlanDropdown={setPlanDropdown}
+            />
+          }
+        />
         <Route path="/blog" element={<BlogScreen />} />
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/contact" element={<Contact />} />

@@ -115,8 +115,14 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
         <p>
           Blue Diamond Studio
           <br />
-          <br /> 556 Upper Wentworth St. <br />
-          Hamilton, ON L9A 4T9, Canada.
+          <br />{" "}
+          <a
+            href="https://www.google.com/maps/place/556+Upper+Wentworth+St,+Hamilton,+ON+L9A+4V2,+Canada/@43.2344776,-79.8571593,17z/data=!4m5!3m4!1s0x882c9bb753a5c789:0x8958bf6e426f1d01!8m2!3d43.234522!4d-79.8574958"
+            target="_blank"
+          >
+            556 Upper Wentworth St. <br />
+            Hamilton, ON L9A 4T9, Canada.
+          </a>
         </p>
       </div>
       <ul className="ftr-lst">
@@ -178,10 +184,14 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
       <div className="scl-md">
         <img src={logoImg} alt="" className="ftr-lg-img" />
 
-        <p>
+        <a
+          href="https://www.google.com/maps/place/556+Upper+Wentworth+St,+Hamilton,+ON+L9A+4V2,+Canada/@43.2344776,-79.8571593,17z/data=!4m5!3m4!1s0x882c9bb753a5c789:0x8958bf6e426f1d01!8m2!3d43.234522!4d-79.8574958"
+          target="_blank"
+          id="link--hidden"
+        >
           556 Upper Wentworth St. <br />
           Hamilton, ON L9A 4T9, Canada.
-        </p>
+        </a>
 
         <h4 className="ftr-hdr">Connect With Us</h4>
         <div className="sm-ctnr">
@@ -201,7 +211,18 @@ function Footer({ HandleMenuSection, setHandleMenuSection }) {
             <RxInstagramLogo className="icon" />
           </a>
         </div>
-        <p>+1 905-929-1635</p>
+        {/* <a
+              href="tel:+19059291635
+
+"
+              target="_blank"
+              className="bttn bttn-try"
+            >
+              Give us a call
+            </a> */}
+        <a href="tel:+19059291635" target="_blank">
+          +1 905-929-1635
+        </a>
       </div>
       <div className="txt-ftr-ctnr">
         <p className="ftr-txt">

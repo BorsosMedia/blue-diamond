@@ -14,22 +14,25 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { FaAmazon } from "react-icons/fa";
-import { BiChevronDown } from "react-icons/bi";
 
 /* import mobileMenuImg from "./assets/mobile-menu-background.png"; */
 
 gsap.registerPlugin(ScrollTrigger);
 
-function HomeScreen() {
+function HomeScreen({
+  PlanToggler,
+  setPlanToggler,
+  PlanDropdown,
+  setPlanDropdown,
+}) {
   const navigate = useNavigate();
-  const [PlanToggler, setPlanToggler] = useState("1");
-  const [UpdatePlans, setUpdatePlans] = useState(true);
-  const [PlanDropdown, setPlanDropdown] = useState(false);
 
   useEffect(() => {
     setPlanDropdown(false);
   }, [PlanToggler]);
-
+  useEffect(() => {
+    setPlanToggler("1");
+  }, []);
   function HandleWeightProgram() {
     navigate("/services");
     setTimeout(() => {
@@ -82,72 +85,10 @@ function HomeScreen() {
           <div className="img-ctnr">{/* <img src={heroImg} alt="" /> */}</div>
         </div>
       </section>
-      <section className="ctnr membership-ctnr">
+      <section className="ctnr scnd-ctnr">
         <div className="hr-hl">
           <img src={svgH} alt="" />
         </div>
-        <h2 className="ttl">Membership Plans</h2>
-
-        <div className="toggle-ctnr">
-          <button
-            className="toggle-drop"
-            onClick={() => setPlanDropdown(!PlanDropdown)}
-          >
-            Choose your type of plan{" "}
-            <BiChevronDown
-              className={PlanDropdown ? "icon dropdown-icon-act" : "icon"}
-            />
-          </button>
-          <div
-            className={
-              PlanDropdown ? "dropdown-ctnr dropdown-ctnr-act" : "dropdown-ctnr"
-            }
-          >
-            <button
-              className={
-                PlanToggler == "1"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("1")}
-            >
-              Monthly
-            </button>
-            <button
-              className={
-                PlanToggler == "2"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("2")}
-            >
-              3 Months
-            </button>
-            <button
-              className={
-                PlanToggler == "3"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("3")}
-            >
-              6 Months
-            </button>
-            <button
-              className={
-                PlanToggler == "4"
-                  ? "toggle-bttn toggle-bttn-act"
-                  : "toggle-bttn"
-              }
-              onClick={() => setPlanToggler("4")}
-            >
-              Annual
-            </button>
-          </div>
-        </div>
-        <PlanSection PlanToggler={PlanToggler} PlanDropdown={PlanDropdown} />
-      </section>
-      <section className="ctnr scnd-ctnr">
         <div className="bk-hr">
           <img src={bookImg} className="img-bk" alt="" />
         </div>
@@ -171,22 +112,32 @@ function HomeScreen() {
           </a>
         </div>
       </section>
+      <section className="ctnr membership-ctnr">
+        <h2 className="ttl">Membership Plans</h2>
+
+        <PlanSection
+          PlanToggler={PlanToggler}
+          setPlanToggler={setPlanToggler}
+          PlanDropdown={PlanDropdown}
+          setPlanDropdown={setPlanDropdown}
+        />
+      </section>
 
       <section className="ctnr thrd-ctnr">
         <div>
           <h2 id="ttlB" className="main-ttl">
-            Join our weight
+            What Makes Our Weight
             <br />
-            Loss program
+            Loss Program Different?
           </h2>
           <p className="txt">
-            Every great journey needs a great companion. Take the first step to
-            get started.
+            Find out first hand how our program works and how it can be
+            beneficial for you.
           </p>
           <button className="bttn bttn-pmr" onClick={HandleWeightProgram}>
             {/* Redigirira a la pagina de servicios  */}
             {/* <FaLongArrowAltRight className="icon" /> */}
-            Join the program
+            Learn More
           </button>
         </div>
       </section>

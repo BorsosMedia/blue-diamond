@@ -3,7 +3,13 @@ import poly1 from "../assets/poly1.png";
 import poly2 from "../assets/poly2.png";
 import poly3 from "../assets/poly3.png";
 import poly4 from "../assets/poly4.png";
-function ServicesScreen() {
+import PlanSection from "../components/PlanSection";
+function ServicesScreen({
+  PlanToggler,
+  setPlanToggler,
+  PlanDropdown,
+  setPlanDropdown,
+}) {
   /*   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []); */
@@ -13,8 +19,12 @@ function ServicesScreen() {
       behavior: "smooth",
     });
   }
+  useEffect(() => {
+    setPlanToggler("1");
+  }, []);
+
   return (
-    <>
+    <div className="service-ctnr">
       <section className="ctnr prm-ctnr">
         <div>
           <h2 className="main-ttl">
@@ -28,7 +38,20 @@ function ServicesScreen() {
           </p>
         </div>
       </section>
-      <section className="ctnr srv-ctnr">
+      <section className="ctnr membership-ctnr">
+        {/*   <div className="hr-hl">
+          <img src={svgH} alt="" />
+        </div> */}
+        <h2 className="ttl">Membership Plans</h2>
+
+        <PlanSection
+          PlanToggler={PlanToggler}
+          setPlanToggler={setPlanToggler}
+          PlanDropdown={PlanDropdown}
+          setPlanDropdown={setPlanDropdown}
+        />
+      </section>
+      {/*     <section className="ctnr srv-ctnr">
         <div>
           <h2 className="main-ttl">Weight loss program</h2>
           <p className="txt">
@@ -37,10 +60,10 @@ function ServicesScreen() {
             and incorporate healthier habits in only 6 weeks.
           </p>
           <button className="bttn bttn-try" onClick={HandleServiceButton}>
-            Join the program {/* <FaLongArrowAltRight className="icon" /> */}
+            Join the program
           </button>
         </div>
-      </section>
+      </section> */}
       <section className="ctnr pgrm-srv" id="srv-id">
         <div className="mdl-txt bx-shdw">
           <h4 className="main-ttl">
@@ -172,9 +195,7 @@ function ServicesScreen() {
         </div>
       </section>
       <section className="ctnr tch-ctnr">
-        <h3 className="main-ttl">
-          Our 6-Week Weight Loss Program Will Teach How To:
-        </h3>
+        <h3 className="main-ttl">Our Weight Loss Program Will Teach How To:</h3>
         <ul>
           <li>Lose weight and control your hunger forever.</li>
           <li>Avoid/control food addiction.</li>
@@ -195,7 +216,7 @@ function ServicesScreen() {
           </li>
         </ul>
       </section>
-    </>
+    </div>
   );
 }
 

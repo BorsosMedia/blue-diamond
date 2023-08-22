@@ -17,53 +17,6 @@ import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
-  /* 
-   
-  Bullet point color black, last paragraph changed bg, product hero changed, first sentence changes,
-  blue diamond about us changes, colorful thing on the services area mobile version change,
-  products hero img gradient
-
-  cambiar el color del texto en el about us (blue diamond studio),
-  cambiar el texo de nexa light a nexa regular de products,
-  hacer que la linea se rompa en 3 lineas para que no llegue tanto al medio,
-  sombra a la caja de productos y ponerle el degradado al fondo,
-  cambiar los botones a color azul, 
-
-
-  Services, 
-  how to get the body of your dreams, quitar el botton s
-  cambiar las lineas que en vez de dos sean 3  s 
-
-
-  about our founder, meet our founder  s
-
-
-  about color text from yellow to blue, s
-  change the button color hover to white s
-  y de color azul
-
-
-  Link the contact area to corresponding adress, phone, and email,
-
-
-
-  THE LOGO ON THE HEADER DOESNT CLOSE THE MENU WHEN CLICKED, 
-  but it changes the navigation.
-
-  Cambiar los objectos en el nav menu, mover los iconos a la derecha, 
-  Join our weight loss program hay que mover el fondo
-
-  Our 6-week program que sean solo dos lineas
-
-  Cambiar el Irma para negrita 
-  Get in touch mas grande   
-
-  Make a way to solve the height overflow part on the Resveratone and BioFit area 
-
-
-  Success stories background 
-
-*/
   const [HandleMenuSection, setHandleMenuSection] = useState("a");
   const [PlanToggler, setPlanToggler] = useState("1");
   const [PlanDropdown, setPlanDropdown] = useState(false);

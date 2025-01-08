@@ -85,7 +85,7 @@ function PlanSection({
               <li className="lst-dsc">Bi-weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly </li>
               <a
-                href="https://bluediamondhealthyliving.com/gold-monthly"
+                href="https://training.bluediamondhealthyliving.com/gold-monthly"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -112,7 +112,7 @@ function PlanSection({
               <li className="lst-dsc">Weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/platinum-monthly"
+                href="https://training.bluediamondhealthyliving.com/platinum-monthly"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -140,7 +140,7 @@ function PlanSection({
               <li className="lst-dsc">Unlimited programming tweaks</li>
 
               <a
-                href="https://bluediamondhealthyliving.com/diamond-monthly"
+                href="https://training.bluediamondhealthyliving.com/diamond-monthly"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -170,7 +170,7 @@ function PlanSection({
               <li className="lst-dsc">Bi-weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/gold-3months"
+                href="https://training.bluediamondhealthyliving.com/gold-3months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -197,7 +197,7 @@ function PlanSection({
               <li className="lst-dsc">Weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/platinum-3months"
+                href="https://training.bluediamondhealthyliving.com/platinum-3months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -225,7 +225,7 @@ function PlanSection({
               <li className="lst-dsc">Unlimited programming tweaks</li>
 
               <a
-                href="https://bluediamondhealthyliving.com/diamond-3months"
+                href="https://training.bluediamondhealthyliving.com/diamond-3months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -255,7 +255,7 @@ function PlanSection({
               <li className="lst-dsc">Bi-weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/gold-6months"
+                href="https://training.bluediamondhealthyliving.com/gold-6months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -282,7 +282,7 @@ function PlanSection({
               <li className="lst-dsc">Weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/platinum-6months"
+                href="https://training.bluediamondhealthyliving.com/platinum-6months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -310,7 +310,7 @@ function PlanSection({
               <li className="lst-dsc">Unlimited programming tweaks</li>
 
               <a
-                href="https://bluediamondhealthyliving.com/diamond-6months"
+                href="https://training.bluediamondhealthyliving.com/diamond-6months"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -340,7 +340,7 @@ function PlanSection({
               <li className="lst-dsc">Bi-weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/gold-annual"
+                href="https://training.bluediamondhealthyliving.com/gold-annual"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -367,7 +367,7 @@ function PlanSection({
               <li className="lst-dsc">Weekly programming tweaks</li>
               <li className="lst-dsc">E-mail and text me directly</li>
               <a
-                href="https://bluediamondhealthyliving.com/platinum-annual"
+                href="https://training.bluediamondhealthyliving.com/platinum-annual"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
@@ -395,7 +395,7 @@ function PlanSection({
               <li className="lst-dsc">Unlimited programming tweaks</li>
 
               <a
-                href="https://bluediamondhealthyliving.com/diamond-annual"
+                href="https://training.bluediamondhealthyliving.com/diamond-annual"
                 className="bttn"
               >
                 <HiShoppingCart className="icon" />
